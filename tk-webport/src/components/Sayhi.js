@@ -3,7 +3,8 @@ import styles from './Sayhi.module.css'
 function Sayhi() {
     return (
         <div className={styles.SayhiBg}>
-            <h1>Hello, Welcome to my portfolio</h1>
+            <h1>Hello I'm Techin </h1>
+           <h2>Welcome to my portfolio</h2>
             <p>
                 I'm looking for you my future company,
                 Just take a look my skills below and consider me to work with you :D
