@@ -1,0 +1,19 @@
+.ContactBg{
+    background-color: pink;
+    width: 500px;
+    height: auto;
+    padding: 20px;
+    margin: 60px 20px;
+}
+
+/* .ContactBg > p{
+    height: 5em;
+} */
+
+.imgLogo {
+    position: relative;
+    top: 5px;
+    width: 1.5em;
+    margin-right: 10px;
+    margin-bottom: 0;
+}

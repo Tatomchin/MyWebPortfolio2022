@@ -1,0 +1,39 @@
+.Navbar{
+    background-color: rgb(214, 213, 214);
+    box-shadow: 0px 1px 10px;
+    height: auto;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+}
+
+.NavSpace{
+
+    display: inline-block;
+}
+
+.NavLogo{
+    padding: 20px;
+    text-align: center;
+    color: rgb(114, 114, 114);
+    font-weight: 600;
+    background-color: rgb(255, 255, 255);
+    border-left: 3px solid;
+    border-left-color:rgb(114, 114, 114);
+}
+
+.BTN{
+    background-color: rgb(102, 102, 102);
+    width: auto;
+    height: auto;
+    padding: 20px;
+    color: white;
+    border:1px solid white;
+    text-align: center;
+    justify-items: center; 
+    display: inline-block;
+    font-weight: 600;
+    border-radius: 10px;
+}
+
