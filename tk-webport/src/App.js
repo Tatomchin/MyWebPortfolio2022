@@ -1,6 +1,6 @@
 import './App.css';
 import Contact from './components/Contact';
-import MyProjects from './components/MyProjects';
+import MyProjects from './components/myProjects/MyProjects';
 import Navbar from './components/Navbar';
 import PictureProfile from './components/PictureProfile';
 import Sayhi from './components/Sayhi';

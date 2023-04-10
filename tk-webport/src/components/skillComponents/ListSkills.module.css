@@ -1,14 +1,12 @@
 .ListSkill{
-    background-color: seashell;
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
 }
 
 .ListSkill li{
-    width: 100px;
+    width: 120px;
     height: auto;
-    border: 2px solid black;
     text-align: center;
 }
 
@@ -18,7 +16,7 @@
 }
 
 .ListSkill >li>div{
-    width: 100px;
+    width: 120px;
     height: 80px;
     display: flex;
     align-items: center;
@@ -26,14 +24,7 @@
 }
 
 .ListSkill >li>p{
-    margin-top: 0;
+    margin-top: 5px;
 }
 
-
-/* 
-#html {
-    background-image: url(../../picture/skillLogos/html.png);
-    height: 600px;
-    width: 500px;
-} */
 

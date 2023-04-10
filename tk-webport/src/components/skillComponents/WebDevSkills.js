@@ -1,4 +1,4 @@
-import styles from './WebDevSkills.module.css'
+import styles from './ListSkills.module.css'
 import htmlPic from  '../../picture/skillLogos/html.png'
 import cssPic from  '../../picture/skillLogos/css.png'
 import jsPic from  '../../picture/skillLogos/js.png'

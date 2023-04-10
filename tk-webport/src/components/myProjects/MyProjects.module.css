@@ -1,6 +1,7 @@
 .MyProjectsBg{
     background-color: rgb(214, 213, 214);
-    width: 70%;
-    height: 600px;
+    width: auto;
+    height: auto;
     margin: 60px 20px;
+    padding: 40px;
 }
