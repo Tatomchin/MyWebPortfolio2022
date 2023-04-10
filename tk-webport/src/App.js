@@ -4,7 +4,7 @@ import MyProjects from './components/MyProjects';
 import Navbar from './components/Navbar';
 import PictureProfile from './components/PictureProfile';
 import Sayhi from './components/Sayhi';
-import Skills from './components/Skills';
+import Skills from './components/skillComponents/Skills';
 import UnderBar from './components/UnderBar';
 
 
