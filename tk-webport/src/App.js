@@ -11,7 +11,7 @@ import UnderBar from './components/UnderBar';
 function App() {
   return (
     <section className="App">
-      <Navbar />
+      <Navbar/>
       <div className="Content">
         <PictureProfile />
         <Sayhi/>

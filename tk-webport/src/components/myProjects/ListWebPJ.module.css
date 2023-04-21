@@ -1,15 +1,39 @@
 .listProject{
 
 }
-.listProject >h4> a > img{
+.gitHubImg{
     margin-left: 10px;
     height: 1.5em;
     width: auto;
-
 }
 
-.listProject >div> img{
+.imgPjEx{
     width: 300px;
     height: 155px;
     margin-left: 10px;
 }
+
+
+.blackGroundBlack{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: 80%;
+    height: 100vh;
+    width: 100%;
+}
+
+.BorderFullSizeImge{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-75%, -50%);
+}
+
+.FullSizeImge{
+    height: 150%;
+    width: 150%;
+}
+
+

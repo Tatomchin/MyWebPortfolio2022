@@ -1,55 +1,79 @@
-import styles from './ListWebPJ.module.css'
-import picGithub from '../../picture/logo/github.png'
+import React, { useState } from 'react';
+import styles from './ListWebPJ.module.css';
+import picGithub from '../../picture/logo/github.png';
 
-import picAsean1 from '../../picture/exProjects/web/asean/1.png'
-import picAsean2 from '../../picture/exProjects/web/asean/2.png'
-import picAsean3 from '../../picture/exProjects/web/asean/3.png'
-
-import picConsole1 from '../../picture/exProjects/web/rocket/1.png'
-import picConsole2 from '../../picture/exProjects/web/rocket/2.png'
-import picConsole3 from '../../picture/exProjects/web/rocket/3.png'
-
-import picCleanfield1 from '../../picture/exProjects/web/cleanfield/1.png'
-import picCleanfield2 from '../../picture/exProjects/web/cleanfield/2.png'
-import picCleanfield3 from '../../picture/exProjects/web/cleanfield/3.png'
+import ShowContentWebPJ from './ContentWebPj';
 
 function ListWebPJ() {
+    const [showContentPJ1, setShowContentPJ1] = useState(null);
+    const [showContentPJ2, setShowContentPJ2] = useState(null);
+    const [showContentPJ3, setShowContentPJ3] = useState(null);
+
+    const [btnShow1, setbtnShow1] = useState("Show");
+    const [btnShow2, setbtnShow2] = useState("Show");
+    const [btnShow3, setbtnShow3] = useState("Show");
+
+    function onClickShow(numPJ) {
+        switch (numPJ) {
+            case 0:
+                if (!!showContentPJ1) {
+                    setShowContentPJ1(null);
+                    setbtnShow1("Show");
+                } else {
+                    setShowContentPJ1(<ShowContentWebPJ contentNumber={numPJ}/>);
+                    setbtnShow1("Hide");
+                }
+
+                break;
+            case 1:
+                if (!!showContentPJ2) {
+                    setShowContentPJ2(null);
+                    setbtnShow2("Show");
+                } else {
+                    setShowContentPJ2(<ShowContentWebPJ contentNumber={numPJ}/>);
+                    setbtnShow2("Hide");
+                }
+                break;
+            case 2:
+                if (!!showContentPJ3) {
+                    setShowContentPJ3(null);
+                    setbtnShow3("Show");
+                } else {
+                    setShowContentPJ3(<ShowContentWebPJ contentNumber={numPJ}/>);
+                    setbtnShow3("Hide");
+                }
+                break;
+            default:
+        }
+    }
+
     return (
         <div>
             <h3>WEBSITE PROJECTS</h3>
             <ul>
                 <li className={styles.listProject}>
                     <h4>
-                        <a href="https://asean-information-itkmitl.netlify.app/">Apr 2020 ASEAN Information Web</a> 
-                        <a href="https://github.com/Tatomchin/AseanWebIT"><img src={picGithub} alt="GitHub Logo" /></a>
+                        <a href="https://asean-information-itkmitl.netlify.app/">Apr 2020 ASEAN Information Web</a>
+                        <a href="https://github.com/Tatomchin/AseanWebIT"><img className={styles.gitHubImg} src={picGithub} alt="GitHub Logo" /></a>
+                        <button onClick={() => { onClickShow(0) }}>{btnShow1}</button>
                     </h4>
-                    <div>
-                        <img src={picAsean1} alt="Asean 1" />
-                        <img src={picAsean2} alt="Asean 2" />
-                        <img src={picAsean3} alt="Asean 3" />
-                    </div>
+                    {showContentPJ1}
                 </li>
                 <li className={styles.listProject}>
                     <h4>
-                        <a href="https://console-travel-rocketpj.netlify.app/#home">Sep 2020 Consoles's Travel</a> 
-                        <a href="https://github.com/Tatomchin/RockProject-MP2020"><img src={picGithub} alt="GitHub Logo" /></a>
+                        <a href="https://console-travel-rocketpj.netlify.app/#home">Sep 2020 Consoles's Travel</a>
+                        <a href="https://github.com/Tatomchin/RockProject-MP2020"><img className={styles.gitHubImg} src={picGithub} alt="GitHub Logo" /></a>
+                        <button onClick={() => { onClickShow(1) }}>{btnShow2}</button>
                     </h4>
-                    <div>
-                        <img src={picConsole1} alt="Consoles's Travel 1" />
-                        <img src={picConsole2} alt="Consoles's Travel 2" />
-                        <img src={picConsole3} alt="Consoles's Travel 3" />
-                    </div>
+                    {showContentPJ2}
                 </li>
                 <li className={styles.listProject}>
                     <h4>
-                        <a href="https://cleanfield.netlify.app/">Nov 2020 Cleanfield Web</a> 
-                        <a href="https://github.com/Tatomchin/coopProject-Cleanfield"><img src={picGithub} alt="GitHub Logo" /></a>
+                        <a href="https://cleanfield.netlify.app/">Nov 2020 Cleanfield Web</a>
+                        <a href="https://github.com/Tatomchin/coopProject-Cleanfield"><img className={styles.gitHubImg} src={picGithub} alt="GitHub Logo" /></a>
+                        <button onClick={() => { onClickShow(2) }}>{btnShow3}</button>
                     </h4>
-                    <div>
-                        <img src={picCleanfield1} alt="Clean Field 1" />
-                        <img src={picCleanfield2} alt="Clean Field 2" />
-                        <img src={picCleanfield3} alt="Clean Field 3" />
-                    </div>
+                    {showContentPJ3}
                 </li>
             </ul>
         </div>

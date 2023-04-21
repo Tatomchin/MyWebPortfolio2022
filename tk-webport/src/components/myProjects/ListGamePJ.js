@@ -1,14 +1,65 @@
-import styles from './ListGamePJ.module.css'
+import React, { useState } from 'react';
+import styles from './ListGamePJ.module.css';
+import picGithub from '../../picture/logo/github.png';
 
-import picduckHunt1 from '../../picture/exProjects/game/duckhunt/1.png'
-import picduckHunt2 from '../../picture/exProjects/game/duckhunt/2.png'
-import picduckHunt3 from '../../picture/exProjects/game/duckhunt/3.png'
-
-import picdeadLineSpace1 from '../../picture/exProjects/game/dead-line-space/1.png'
-import picdeadLineSpace2 from '../../picture/exProjects/game/dead-line-space/2.png'
-import picdeadLineSpace3 from '../../picture/exProjects/game/dead-line-space/3.png'
+import ShowContentGamePJ from './ContentGamePj';
 
 function ListGamePJ() {
+
+    const [showContentPJ1, setShowContentPJ1] = useState(null);
+    const [showContentPJ2, setShowContentPJ2] = useState(null);
+    const [showContentPJ3, setShowContentPJ3] = useState(null);
+    const [showContentPJ4, setShowContentPJ4] = useState(null);
+
+    const [btnShow1, setbtnShow1] = useState("Show");
+    const [btnShow2, setbtnShow2] = useState("Show");
+    const [btnShow3, setbtnShow3] = useState("Show");
+    const [btnShow4, setbtnShow4] = useState("Show");
+
+    function onClickShow(numPJ) {
+        switch (numPJ) {
+            case 0:
+                if (!!showContentPJ1) {
+                    setShowContentPJ1(null);
+                    setbtnShow1("Show");
+                } else {
+                    setShowContentPJ1(<ShowContentGamePJ contentNumber={numPJ}/>);
+                    setbtnShow1("Hide");
+                }
+
+                break;
+            case 1:
+                if (!!showContentPJ2) {
+                    setShowContentPJ2(null);
+                    setbtnShow2("Show");
+                } else {
+                    setShowContentPJ2(<ShowContentGamePJ contentNumber={numPJ}/>);
+                    setbtnShow2("Hide");
+                }
+                break;
+            case 2:
+                if (!!showContentPJ3) {
+                    setShowContentPJ3(null);
+                    setbtnShow3("Show");
+                } else {
+                    setShowContentPJ3(<ShowContentGamePJ contentNumber={numPJ}/>);
+                    setbtnShow3("Hide");
+                }
+                break;
+            case 3:
+                if (!!showContentPJ4) {
+                    setShowContentPJ4(null);
+                    setbtnShow4("Show");
+                } else {
+                    setShowContentPJ4(<ShowContentGamePJ contentNumber={numPJ}/>);
+                    setbtnShow4("Hide");
+                }
+                break;
+            default:
+        }
+
+    }
+
     return (
         <div>
             <h3>GAME PROJECTS</h3>
@@ -16,50 +67,32 @@ function ListGamePJ() {
                 <li className={styles.listProject}>
                     <h4>
                         May 2022 DropQuest (UE4)
+                        <button onClick={() => { onClickShow(0) }}>{btnShow1}</button>
                     </h4>
-                    <p>This is game for learning about chemistry.</p>
-                    <p><b>Awards for this project.</b></p>
-                    <ul>
-                        <li>19th ECTI-CON (International Conference on Electrical Engineering/Electronics, Computer, Telecommunications and Information Techonology) 2022 HUA HIN, Thailand)</li>
-                        <li>24th NSC 2022(National Software Contest) Entered finals</li>
-                    </ul>
-                    <div>
-                        <iframe src="https://drive.google.com/file/d/1HGJQkrxEQTTGBGz78Bo-JLCSP5NCf7Lj/preview" width="560" height="315" title="DropQuestVDO" allow="autoplay"></iframe>
-                    </div>
+                    {showContentPJ1}
                 </li>
                 <li className={styles.listProject}>
                     <h4>
                         Dec 2020 JustCook (UE4)
+                        <button onClick={() => { onClickShow(1) }}>{btnShow2}</button>
                     </h4>
-                    <div>
-                        <iframe src="https://drive.google.com/file/d/1GGUJYpz8EdtUHWGoiBaHjjGgt0S_SPOx/preview" width="560" height="315" title="JustCookVDO" allow="autoplay"></iframe>
-                    </div>
+                    {showContentPJ2}
                 </li>
                 <li className={styles.listProject}>
                     <h4>
                         Sep 2020 DuckHunt for Consoles's Travel Web (JS)
+                        <a href="https://github.com/Tatomchin/DuckHuntJS"><img className={styles.gitHubImg} src={picGithub} alt="GitHub Logo" /></a>
+                        <button onClick={() => { onClickShow(2) }}>{btnShow3}</button>
                     </h4>
-                    <div>
-                        <img src={picduckHunt1} alt="DuckHunt 1" />
-                        <img src={picduckHunt2} alt="DuckHunt 2" />
-                        <img src={picduckHunt3} alt="DuckHunt 3" />
-                    </div>
-                    <div>
-                        <a href="https://duckhunt-js-tk.netlify.app/">Click to play!</a>
-                    </div>
+                    {showContentPJ3}
                 </li>
                 <li className={styles.listProject}>
                     <h4>
                         Mar 2019 DeadLineSpace Game (JS)
+                        <a href="https://github.com/Tatomchin/DeadLineSpace"><img className={styles.gitHubImg} src={picGithub} alt="GitHub Logo" /></a>
+                        <button onClick={() => { onClickShow(3) }}>{btnShow4}</button>
                     </h4>
-                    <div>
-                        <img src={picdeadLineSpace1} alt="DeadLineSpace 1" />
-                        <img src={picdeadLineSpace2} alt="DeadLineSpace 2" />
-                        <img src={picdeadLineSpace3} alt="DeadLineSpace 3" />
-                    </div>
-                    <div>
-                        <a href="https://dead-line-space-firstpj.netlify.app/">Click to play!</a>
-                    </div>
+                    {showContentPJ4}
                 </li>
             </ul>
         </div>

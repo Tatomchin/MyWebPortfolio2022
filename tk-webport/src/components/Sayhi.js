@@ -7,9 +7,9 @@ function Sayhi() {
            <h2>Welcome to my portfolio</h2>
             <p>
                 I'm looking for you my future company,
-                Just take a look my skills below and consider me to work with you :D
+                Just take a look my skills below and considering me to work with you :D
                 I hope to work with you. 
-                My example skill about this
+                My example skills about this
                 Web-Dev, Font-End and Game-Dev
                 Thank you for your attention.
             </p>

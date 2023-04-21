@@ -1,5 +1,5 @@
-import styles from './MyProjects.module.css'
-import ListWebPJ from './ListWebPJ'
+import styles from './MyProjects.module.css';
+import ListWebPJ from './ListWebPJ';
 import ListGamePJ from './ListGamePJ';
 
 function MyProjects() {
