@@ -21,6 +21,7 @@
     opacity: 80%;
     height: 100vh;
     width: 100%;
+    z-index:4 ;
 }
 
 .BorderFullSizeImge{
@@ -28,6 +29,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-75%, -50%);
+    z-index:5 ;
 }
 
 .FullSizeImge{

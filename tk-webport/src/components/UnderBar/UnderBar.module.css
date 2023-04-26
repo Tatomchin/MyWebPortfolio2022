@@ -1,9 +1,10 @@
 .UnderBar{
     background-color: rgb(214, 213, 214);
-    height: auto;
     width: auto;
+    height: auto;
     padding: 5px;
     display: block;
     text-align: center;
+    margin-top: 50px;
     margin-bottom: 0;
 }

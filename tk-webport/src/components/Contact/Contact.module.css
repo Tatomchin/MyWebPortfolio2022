@@ -1,14 +1,14 @@
 .ContactBg{
     background-color: rgb(214, 213, 214);
-    width: 300px;
-    height: 800px;
+    width: 1000px;
+    height: auto;
     padding: 40px;
-    margin: 60px 20px;
+    margin: 0 10px;
 }
 
-/* .ContactBg > p{
-    height: 5em;
-} */
+@media screen and (max-width: 800px){
+
+}
 
 .imgLogo {
     position: relative;

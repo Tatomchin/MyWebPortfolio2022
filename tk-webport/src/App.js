@@ -1,25 +1,53 @@
 import './App.css';
-import Contact from './components/Contact';
-import MyProjects from './components/myProjects/MyProjects';
-import Navbar from './components/Navbar';
+import Contact from './components/Contact/Contact';
+import MyProjects from './components/MyProjects/MyProjects';
+import Navbar from './components/Navbar/Navbar';
 import PictureProfile from './components/PictureProfile';
 import Sayhi from './components/Sayhi';
-import Skills from './components/skillComponents/Skills';
-import UnderBar from './components/UnderBar';
+import Skills from './components/Skills/Skills';
+import UnderBar from './components/UnderBar/UnderBar';
+
+import { useEffect, useRef } from 'react';
+
 
 
 function App() {
+
+
+  const techinTag = useRef(null);
+  const options = {
+    threshold: 1
+  }
+
+  useEffect(() => {
+
+    const observerKub = new IntersectionObserver(wait => {
+      console.log(wait)
+    }, {options});
+    if (techinTag.current) {
+      observerKub.observe(techinTag.current)
+    }
+    return () => {
+      if (techinTag.current) {
+        observerKub.unobserve(techinTag.current)
+      }
+    }
+    }, [techinTag, options])
+
+
   return (
-    <section className="App">
-      <Navbar/>
+    <section className="App" >
+      <Navbar />
       <div className="Content">
-        <PictureProfile />
-        <Sayhi/>
-        <Contact/>
-        <Skills/>
-        <MyProjects/>
+        <section id="Techin" >
+          <PictureProfile />
+          <Sayhi />
+        </section>
+        <section id="Skills" ref={techinTag}><Skills /></section>
+        <section id="Contact"  ><Contact /></section>
+        <section id="Projects" ><MyProjects /></section>
       </div>
-      <UnderBar/>
+      <UnderBar />
     </section>
   );
 }
