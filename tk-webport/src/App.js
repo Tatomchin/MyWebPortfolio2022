@@ -5,7 +5,7 @@ import Navbar from './components/Navbar/Navbar';
 import PictureProfile from './components/PictureProfile';
 import Sayhi from './components/Sayhi';
 import Skills from './components/Skills/Skills';
-import UnderBar from './components/UnderBar/UnderBar';
+import UnderBar from './components/Footer/Footer';
 
 import React,{ useEffect, useRef, useState } from 'react';
 const ConData = React.createContext();
@@ -49,44 +49,6 @@ function App() {
       window.removeEventListener("scroll", scrollHandler, true);
     };
   }, []);
-  // console.log('skill = ' + st_SkillTagTop)
-  // console.log('contact = ' + st_ContactTagTop)
-  // console.log('project = ' + st_ProjectTagTop)
-
-  // useEffect(() => {
-  //   let observerRefValue = null;
-  //   const observerKub = new IntersectionObserver((items) => {
-  //     console.log(items[0]);
-  //   }, { rootMargin: "0px" });
-  //   if (skillTag.current) {
-  //     observerKub.observe(skillTag.current)
-  //     observerRefValue = skillTag.current;
-  //   }
-  //   return () => {
-  //     if (observerRefValue) {
-  //     observerKub.unobserve(observerRefValue)
-  //   }}
-  // }, [skillTag])
-
-  // useEffect(() => {
-  //   let observerRefValue = null;
-  //   let options = {
-  //     root: null,
-  //     rootMargin: "0px",
-  //     threshold: 0.25
-  //   };
-  //   const observerKub = new IntersectionObserver((items) => {
-  //     // console.log(items);
-  //   }, { options });
-  //   if (contactTag.current) {
-  //     observerKub.observe(contactTag.current)
-  //     observerRefValue = contactTag.current;
-  //   }
-  //   return () => {
-  //     if (observerRefValue) {
-  //     observerKub.unobserve(observerRefValue)
-  //   }}
-  // }, [contactTag])
 
 
   return (
@@ -99,8 +61,8 @@ function App() {
             <Sayhi />
           </section>
           <section id="Skills" ref={skillTag} ><Skills /></section>
-          <section id="Contact" ref={contactTag} ><Contact /></section>
           <section id="Projects" ref={projectTag} ><MyProjects /></section>
+          <section id="Contact" ref={contactTag} ><Contact /></section>
         </div>
         <UnderBar />
       </section>

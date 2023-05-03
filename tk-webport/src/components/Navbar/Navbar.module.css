@@ -8,7 +8,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    background-color: rgb(214, 213, 214);
+    background-color: #B46060;
     box-shadow: 0px 0px 5px;
     height: var(--HeightNav--);
     width: 100%;
@@ -35,7 +35,7 @@
 }
 
 .BTN{
-    background-color: rgb(102, 102, 102);
+    background-color: rgb(51,38,31);
     width: auto;
     height: auto;
     margin-left: 5px;

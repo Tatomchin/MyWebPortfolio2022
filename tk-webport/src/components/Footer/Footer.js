@@ -1,4 +1,4 @@
-import styles from './UnderBar.module.css'
+import styles from './Footer.module.css'
 
 function UnderBar() {
     return (

@@ -1,7 +1,7 @@
 .SayhiBg{
-    background-color: rgb(214, 213, 214);
+    /* background-color: rgb(214, 213, 214); */
     opacity: 80%;
-    width: 600px;
+    width: 300px;
     height: auto;
     margin: 10px 10px;
     padding: 40px;
@@ -20,6 +20,6 @@
 }
 
 .SayhiBg > p {
-    font-size: 1.5em;
+    font-size: 1em;
     font-weight: 500;
 }
