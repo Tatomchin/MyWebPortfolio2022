@@ -1,15 +1,21 @@
 import './App.css';
+import Techin from './components/Techin';
+import Skills from './components/Skills/Skills';
 import Contact from './components/Contact/Contact';
 import MyProjects from './components/MyProjects/MyProjects';
 import Navbar from './components/Navbar/Navbar';
-import PictureProfile from './components/PictureProfile';
-import Sayhi from './components/Sayhi';
-import Skills from './components/Skills/Skills';
-import UnderBar from './components/Footer/Footer';
+import Footer from './components/Footer/Footer';
 
-import React,{ useEffect, useRef, useState } from 'react';
+import imgGear1 from './picture/section1/gear1.png';
+import imgGear2 from './picture/section1/gear2.png';
+import imgGear3 from './picture/section1/gear3.png';
+
+import React, { useEffect, useRef, useState } from 'react';
 const ConData = React.createContext();
 function App() {
+
+  //Check Top Tag to each element.
+  const contentTag = useRef(null);
   // const [techinTag,setTechinTag] = useState(null);
   const skillTag = useRef(null);
   const contactTag = useRef(null);
@@ -20,11 +26,14 @@ function App() {
   const [st_ProjectTagTop, setST_ProjectTagTop] = useState(false);
 
   const scrollHandler = () => {
+    let contentTagTop = contentTag.current.getBoundingClientRect();
     let skillTagTop = skillTag.current.getBoundingClientRect();
     let contactTagTop = contactTag.current.getBoundingClientRect();
     let projectTagTop = projectTag.current.getBoundingClientRect();
 
-    if (skillTagTop.top <= 10) {
+    document.documentElement.style.setProperty('--scrollRotate--', ((contentTagTop.top * -1) / 10) + 'deg');
+
+    if (skillTagTop.top <= 200) {
       setST_SkillTagTop(true)
       setST_ContactTagTop(false)
       setST_ProjectTagTop(false)
@@ -51,20 +60,40 @@ function App() {
   }, []);
 
 
+  //Check Size of Window Width
+  const [windowDimension, detectHW] = useState({
+    winWidth: window.innerWidth,
+    winHeight: window.innerHeight
+  })
+
+  const detectSize = () => {
+    detectHW({
+      winWidth: window.innerWidth,
+      winHeight: window.innerHeight
+    })
+  }
+
+  useEffect(() => {
+    window.addEventListener('resize', detectSize)
+    return () => {
+      window.removeEventListener('resize', detectSize)
+    }
+  }, [windowDimension])
+
   return (
-    <ConData.Provider value={{st_SkillTagTop, st_ContactTagTop, st_ProjectTagTop}}>
+    <ConData.Provider value={{ st_SkillTagTop, st_ContactTagTop, st_ProjectTagTop, windowDimension }}>
       <section className="App" >
         <Navbar />
-        <div className="Content">
-          <section id="Techin" >
-            <PictureProfile />
-            <Sayhi />
-          </section>
+        <div className="Content" ref={contentTag}>
+          {/* <img id="imgGear1" src={imgGear1} alt="Gear1" />
+          <img id="imgGear2" src={imgGear2} alt="Gear2" />
+          <img id="imgGear3" src={imgGear3} alt="Gear3" /> */}
+          <section id="Techin" ><Techin /></section>
           <section id="Skills" ref={skillTag} ><Skills /></section>
           <section id="Projects" ref={projectTag} ><MyProjects /></section>
           <section id="Contact" ref={contactTag} ><Contact /></section>
         </div>
-        <UnderBar />
+        <Footer />
       </section>
     </ConData.Provider>
   );

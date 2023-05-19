@@ -1,13 +1,25 @@
-.listProject{
+:root{
+    --ListDelayAnimGamePJ--: 0.25s;
+    --ListVisibilityGamePJ--: hidden;
 }
 
 .imgPjEx{
     width: 300px;
     height: 155px;
     margin-left: 10px;
+    border: 1px solid rgb(81, 81, 81);
+    animation: fadeDownImage 1s ease;
 }
 
-.gitHubImg{
+.imgPjEx:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 10px black;
+}
+
+
+.gitHubImg {
+    position: relative;
+    top: 3px;
     margin-left: 10px;
     height: 1.5em;
     width: auto;
@@ -15,13 +27,14 @@
 
 .blackGroundBlack{
     position: fixed;
-    top: 0;
-    left: 0;
+    top: 0px;
+    left: 0px;
     background-color: black;
     opacity: 80%;
     height: 100vh;
     width: 100%;
     z-index:4 ;
+    animation: opShowFullSizeImg 0.75s ease;
 }
 
 .BorderFullSizeImge{
@@ -30,9 +43,584 @@
     left: 50%;
     transform: translate(-75%, -50%);
     z-index:5 ;
+    animation: opShow 0.75s ease;
 }
 
 .FullSizeImge{
     height: 150%;
     width: 150%;
+}
+
+.FullSizeImgeCer{
+    top: 50px;
+    height: 120%;
+    width: 120%;
+    transform: translate(15%, 5%);
+}
+
+.pjContent{
+    height: 600px;
+    animation: fadeDown 1s ease;
+}
+
+.pjText {
+    animation: opShow 1s ease;
+    text-align: justify;
+    text-indent: 50px;
+}
+
+.pjh4{
+    text-indent: 0;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.pjUL{
+    text-indent: 0;
+    text-align: left;
+    list-style-type: square;
+
+}
+
+.hideContent {
+    animation: fadeUpHide 1s ease;
+}
+
+.hideText {
+    animation: opHide 1s ease;
+}
+
+.hideImgPjEx {
+    animation: fadeUpImage 1s ease;
+}
+
+.pjContent>.imgProjects {
+    animation: opShow 2s ease;
+}
+
+.exVDO{
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 560px;
+    height: 315px;
+    border: 1px solid rgb(65, 65, 65);
+    box-shadow: 0 0 3px black;
+    animation: opShow 3s ease; 
+}
+
+.exVDO > iframe{
+    width: 100%;
+    height: 100%;
+}
+
+#Certificate{
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    width: auto;
+    position: relative;
+    margin-top: 10px;
+}
+
+#Certificate > img{
+    width: 180px;
+    height: auto;
+}
+
+.AnimListSkill li {
+    animation: fadeDownList var(--ListDelayAnimGamePJ--) ease-in both;
+}
+
+.AnimListSkill li:nth-child(1) {
+    animation-delay: calc(var(--ListDelayAnimGamePJ--) + 0.5s);
+}
+.AnimListSkill li:nth-child(2) {
+    animation-delay: calc(var(--ListDelayAnimGamePJ--) + 0.75s);
+}
+.AnimListSkill li:nth-child(3) {
+    animation-delay: calc(var(--ListDelayAnimGamePJ--) + 1s);
+}
+.AnimListSkill li:nth-child(4) {
+    animation-delay: calc(var(--ListDelayAnimGamePJ--) + 1.25s);
+}
+
+.DropQuest{
+    height: 730px;
+    width: auto;
+    padding-bottom: 10px;
+    animation: fadeDownDropQuest 0.7s ease;
+}
+
+.JustCook{
+    height: 400px;
+    width: auto;
+    padding-bottom: 10px;
+    animation: fadeDownJustCook 0.7s ease;
+}
+
+.DuckHunt{
+    height: 650px;
+    width: auto;
+    padding-bottom: 10px;
+    animation: fadeDownDuckHunt 0.7s ease;
+}
+.DeadLineSpace{
+    height: 650px;
+    width: auto;
+    padding-bottom: 10px;
+    animation: fadeDownDeadLineSpace 0.7s ease;
+}
+
+@media screen and (max-width: 600px) {
+    .imgPjEx {
+        width: 150px;
+        height: 80px;
+        margin-left: 0px;
+        animation: fadeDownImageMax600 1s ease;
+    }
+    .pjText {
+        font-size: 0.5em;
+    }
+    .pjContent {
+        height: auto;
+        width: auto;
+        animation: fadeDownMax600 1s ease;
+    }
+
+    .hideImgPjEx {
+        animation: fadeUpImageMax600 1s ease;
+    }
+    .hideText {
+        animation: opHide 1s ease;
+    }
+    .hideContent {
+        animation: fadeUpHide 1s ease;
+    }
+    .exVDO{
+        width: 180px;
+        height: 120px;
+    }
+    #Certificate{
+        display: flex;
+        flex-wrap: wrap;
+        height: auto;
+        width: auto;
+        position: relative;
+        margin-top: 10px;
+        justify-content: center;
+    }
+    
+    #Certificate > img{
+        width: 100px;
+        height: auto;
+        margin-top: 5px;
+        margin-left: 5px;
+    }
+
+    .DropQuest{
+        height: 630px;
+        width: auto;
+        padding-bottom: 10px;
+        animation: fadeDownDropQuestMax600 1s ease;
+    }
+    
+    .JustCook{
+        height: 230px;
+        width: auto;
+        padding-bottom: 10px;
+        animation: fadeDownJustCookMax600 1s ease;
+    }
+    
+    .DuckHunt{
+        height: 370px;
+        width: auto;
+        padding-bottom: 10px;
+        animation: fadeDownDuckHuntMax600 1s ease;
+    }
+    .DeadLineSpace{
+        height: 390px;
+        width: auto;
+        padding-bottom: 10px;
+        animation: fadeDownDeadLineSpaceMax600 1s ease;
+    }
+}
+
+@media screen and (min-width: 600px){
+    .imgPjEx {
+        width: 300px;
+        height: 155px;
+        margin-left: 10px;
+        animation: fadeDownImage 1s ease;
+    }
+    .pjText {
+        font-size: 1em;
+    }
+
+    .pjContent {
+        height: auto;
+        width: auto;
+        padding-bottom: 10px;
+        animation: fadeDown 0.7s ease;
+    }
+
+        
+     .hideText {
+        animation: opHide 0.4s ease;
+    }
+    .hideImgPjEx {
+        animation: opHide 0.4s ease;
+    }
+    .exVDO{
+        width: 400px;
+        height: 250px;
+    }
+
+    .hideContent {
+        animation: fadeUpHide 1s ease;
+    }
+
+    #Certificate{
+        display: flex;
+        flex-wrap: wrap;
+        height: auto;
+        width: auto;
+        position: relative;
+        margin-top: 10px;
+        justify-content: center;
+    }
+    
+    #Certificate > img{
+        width: 180px;
+        height: auto;
+        margin-top: 5px;
+        margin-left: 5px;
+    }
+    .DropQuest{
+        height: 730px;
+        width: auto;
+        padding-bottom: 10px;
+        animation: fadeDownDropQuest 1s ease;
+    }
+    
+    .JustCook{
+        height: 400px;
+        width: auto;
+        padding-bottom: 10px;
+        animation: fadeDownJustCook 1s ease;
+    }
+    
+    .DuckHunt{
+        height: 650px;
+        width: auto;
+        padding-bottom: 10px;
+        animation: fadeDownDuckHunt 1s ease;
+    }
+    .DeadLineSpace{
+        height: 650px;
+        width: auto;
+        padding-bottom: 10px;
+        animation: fadeDownDeadLineSpace 1s ease;
+    }
+}
+
+.DropQuestFadeUp{animation: fadeUpDropQuest 0.7s ease;}
+.JustCookFadeUp{animation: fadeUpJustCook 0.7s ease;}
+.DuckHuntFadeUp{animation: fadeUpDuckHunt 0.7s ease;}
+.DeadlineSpaceFadeUp{animation: fadeUpDeadLinpSpace 0.7s ease;}
+
+@keyframes fadeDown {
+    0% {
+        height: 0px;
+    }
+
+    100% {
+        height: 600px;
+    }
+}
+
+
+@keyframes fadeDownMax600 {
+    0% {
+        height: 0px;
+    }
+
+    100% {
+        height: 400px;
+    }
+}
+
+@keyframes fadeDownDropQuest {
+    0% {
+        height: 0px;
+    }
+
+    100% {
+        height: 730px;
+    }
+}
+
+@keyframes fadeDownDropQuestMax600 {
+    0% {
+        height: 0px;
+    }
+
+    100% {
+        height: 630px;
+    }
+}
+@keyframes fadeUpDropQuest {
+    0% {
+        height: 730px;
+    }
+
+    100% {
+        height: 0px;
+    }
+}
+
+@keyframes fadeUpDropQuestMax600 {
+    0% {
+        height: 630px;
+    }
+
+    100% {
+        height: 0px;
+    }
+}
+
+@keyframes fadeDownJustCook {
+    0% {
+        height: 0px;
+    }
+
+    100% {
+        height: 400px;
+    }
+}
+
+@keyframes fadeDownJustCookMax600 {
+    0% {
+        height: 0px;
+    }
+
+    100% {
+        height: 230px;
+    }
+}
+
+@keyframes fadeUpJustCook {
+    0% {
+        height: 400px;
+    }
+
+    100% {
+        height: 0px;
+    }
+}
+
+@keyframes fadeUpJustCookMax600 {
+    0% {
+        height: 230;
+    }
+
+    100% {
+        height: 0px;
+    }
+}
+
+@keyframes fadeDownDuckHunt {
+    0% {
+        height: 0px;
+    }
+
+    100% {
+        height: 650px;
+    }
+}
+
+@keyframes fadeDownDuckHuntMax600 {
+    0% {
+        height: 0px;
+    }
+
+    100% {
+        height: 370px;
+    }
+}
+
+@keyframes fadeUpDuckHunt {
+    0% {
+        height: 650px;
+    }
+
+    100% {
+        height: 0px;
+    }
+}
+
+@keyframes fadeUpDuckHuntMax600 {
+    0% {
+        height: 370px;
+    }
+
+    100% {
+        height: 0px;
+    }
+}
+
+@keyframes fadeDownDeadLineSpace {
+    0% {
+        height: 0px;
+    }
+
+    100% {
+        height: 650px;
+    }
+}
+
+@keyframes fadeDownDeadLineSpaceMax600 {
+    0% {
+        height: 0px;
+    }
+
+    100% {
+        height: 390px;
+    }
+}
+
+@keyframes fadeUpDeadLinpSpace {
+    0% {
+        height: 650px;
+    }
+
+    100% {
+        height: 0px;
+    }
+}
+
+@keyframes fadeUpDeadLinpSpaceMax600 {
+    0% {
+        height: 390px;
+    }
+
+    100% {
+        height: 0px;
+    }
+}
+
+@keyframes fadeUpHide {
+    0% {
+        height: 600px;
+    }
+
+    100% {
+        height: 0px;
+    }
+}
+
+@keyframes fadeDownImage {
+    0% {
+        height: 0;
+        opacity: 0;
+    }
+    50% {
+
+        opacity: 0;
+    }
+
+    100% {
+        height: 155px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeDownImageMax600 {
+    0% {
+        height: 0;
+    }
+
+    100% {
+        height: 80px;
+    }
+}
+
+@keyframes fadeUpImage {
+    0% {
+        height: 155px;
+        opacity: 1;
+    }
+
+    80% {
+        height: 0;
+        opacity: 0;
+    }
+
+    100% {
+        height: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeUpImageMax600 {
+    0% {
+        height: 80px;
+        opacity: 1;
+    }
+
+    80% {
+        height: 0;
+        opacity: 0;
+    }
+
+    100% {
+        height: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes opShow {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes opHide {
+    0% {
+        opacity: 1;
+    }
+
+    30% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes opShowFullSizeImg {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 80%;
+    }
+}
+
+@keyframes fadeDownList {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -20%, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
 }

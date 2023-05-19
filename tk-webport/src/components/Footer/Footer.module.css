@@ -1,5 +1,5 @@
-.UnderBar{
-    background-color: #4D4D4D;
+.Footer{
+    background-color: #03001C;
     width: auto;
     height: auto;
     padding: 5px;
@@ -7,4 +7,6 @@
     text-align: center;
     /* margin-top: 50px; */
     margin-bottom: 0;
+    z-index: 100;
+    position: relative;
 }

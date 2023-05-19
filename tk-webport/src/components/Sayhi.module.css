@@ -1,25 +1,164 @@
 .SayhiBg{
     /* background-color: rgb(214, 213, 214); */
     opacity: 80%;
-    width: 300px;
-    height: auto;
-    margin: 10px 10px;
-    padding: 40px;
     font-weight: 800;
+    z-index: 1;
 }
 
 .SayhiBg > h1 {
-    text-align: left;
-    font-size: 2em;
+    /* background-color: #19376D; */
 }
 
 .SayhiBg > h2 {
-    margin-top: -40px;
-    text-align: left;
-    font-size: 2em;
 }
 
 .SayhiBg > p {
-    font-size: 1em;
-    font-weight: 500;
 }
+
+#myName{
+    color: rgb(255, 255, 255);
+}
+
+#career{
+    color: rgb(240, 77, 77);
+    /* background-color: white; */
+}
+
+#welcome{
+    /* background-color: #19376D; */
+}
+
+@media screen and (max-width: 600px){
+    .SayhiBg{
+        /* background-color: brown; */
+        width: 250px;
+        height: 300px;
+        margin-top: -150px;
+        padding: 5px;
+        font-weight: 800;
+    }
+    
+    .SayhiBg > h1 {
+        text-align: center;
+        font-size: 1.2em;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    
+    .SayhiBg > h2 {
+        text-align: center;
+        font-size: 1em;
+    }
+    
+    .SayhiBg > p {
+        font-size: 0.7em;
+        font-weight: 500;
+        margin-top: -0px;
+        text-align: justify;
+    }
+    
+    #myName{
+    }
+    
+    #career{
+        line-height: auto;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    
+    #welcome{
+        font-size: 1em;
+        margin-top: auto;
+        margin-bottom: auto;
+        line-height: auto;
+    }
+} 
+
+@media screen and (min-width: 600px) {
+    .SayhiBg{
+        width: 250px;
+        height: auto;
+        margin-top: auto;
+        margin: 10px 0px;
+        padding: 10px;
+        font-weight: 800;
+    }
+    
+    .SayhiBg > h1 {
+        text-align: left;
+        font-size: 1.7em;
+        margin-top: 0.1em;
+        margin-bottom: -0.2em;
+    }
+    
+    .SayhiBg > h2 {
+        text-align: left;
+        font-size: 1.5em;
+    }
+    
+    .SayhiBg > p {
+        font-size: 0.9em;
+        font-weight: 500;
+
+        margin-top: 20px;
+        text-align: start;
+    }
+    
+    #myName{
+    }
+    
+    #career{
+        line-height: 1.1;
+        margin-top: 0em;
+        margin-bottom: 1.5em;
+    }
+    
+    #welcome{
+        font-size: 1.3em;
+        margin-top: -40px;
+        margin-bottom: -15px;
+        line-height: 1.1;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .SayhiBg{
+        width: 300px;
+        font-weight: 800;
+    }
+    
+    .SayhiBg > h1 {
+        font-size: 2em;
+    }
+    
+    .SayhiBg > h2 {
+        font-size: 1.7em;
+    }
+    
+    .SayhiBg > p {
+        font-size: 1em;
+        font-weight: 500;
+    }
+    
+    #myName{
+    }
+    
+    #career{
+        line-height: 1.1;
+    }
+    
+    #welcome{
+        font-size: 1.4em;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .SayhiBg{
+        width: 400px;
+        margin-left: 20px;
+    }
+    .SayhiBg > p {
+        font-size: 1.5em;
+    } 
+}
+

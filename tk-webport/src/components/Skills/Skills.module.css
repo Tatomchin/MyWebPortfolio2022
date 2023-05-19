@@ -1,7 +1,100 @@
+:root{
+    --opacityBG--: 0;
+}
+
 .SkillBg{
-    /* background-color: rgb(214, 213, 214); */
-    width: auto;
-    height: auto;
-    padding: 40px;
-    margin: 0 10px;
+    position: relative;
+    opacity: var(--opacityBG--);
+}
+
+.SkillBgAnim{
+    animation: fadeUp 1s ease-in-out;
+}
+
+.SkillBg >h2{
+    position: relative;
+    text-align: center;
+    color: rgb(95, 58, 2);
+    z-index: 1;
+}
+
+#bgPaper{
+    position: absolute;
+    z-index: 0;
+}
+
+@media screen and (max-width: 600px){
+    .SkillBg{
+        width: auto;
+        height: auto;
+        padding-top: 30px;
+        padding-bottom: 50px;
+        margin: 0 10px;
+    }
+    
+    .SkillBg >h2{
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    
+    #bgPaper{
+        top: 0;
+        left: -35px;
+        height: 100%;
+        width: 320px;
+    }
+}
+
+@media screen and (min-width: 400px){
+    .SkillBg{
+        width: auto;
+        height: auto;
+        padding: 40px;
+        padding-top: 30px;
+        padding-bottom: 50px;
+        margin: 0 10px;
+    }
+
+    #bgPaper{
+        top: 0;
+        left: -20px;
+        height: 100%;
+        width: 400px;
+    }
+}
+
+@media screen and (min-width: 600px){
+    .SkillBg{
+        width: auto;
+        height: auto;
+        padding: 120px;
+        padding-top: 30px;
+        padding-bottom: 50px;
+        margin: 0 10px;
+    }
+    
+    
+    .SkillBg >h2{
+        position: relative;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    
+    #bgPaper{
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@keyframes fadeUp {
+	0% {
+        top: 30px;
+		opacity: 0;
+	}
+	100% {
+        top: 0px;
+		opacity: 1;
+	}
 }

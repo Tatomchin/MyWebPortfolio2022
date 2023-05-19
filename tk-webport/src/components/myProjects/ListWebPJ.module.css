@@ -1,20 +1,31 @@
-.listProject{
-
+:root{
+    --ListDelayAnimWebPJ--: 0.25s;
+    --ListVisibilityWebPJ--: hidden;
 }
-.gitHubImg{
+
+.gitHubImg {
+    position: relative;
+    top: 5px;
     margin-left: 10px;
     height: 1.5em;
     width: auto;
 }
 
-.imgPjEx{
+.imgPjEx {
     width: 300px;
     height: 155px;
     margin-left: 10px;
+    border: 1px solid rgb(81, 81, 81);
+    animation: fadeDownImage 1s ease;
 }
 
+.imgPjEx:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 10px black;
+}
 
-.blackGroundBlack{
+/* Open Full Size Image */
+.blackGroundBlack {
     position: fixed;
     top: 0;
     left: 0;
@@ -22,20 +33,250 @@
     opacity: 80%;
     height: 100vh;
     width: 100%;
-    z-index:4 ;
+    z-index: 4;
+    animation: opShowFullSizeImg 0.75s ease;
 }
 
-.BorderFullSizeImge{
+.BorderFullSizeImge {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-75%, -50%);
     z-index: 5;
+    animation: opShow 0.75s ease;
 }
 
-.FullSizeImge{
+.FullSizeImge {
     height: 150%;
     width: 150%;
 }
 
+.pjContent {
+    height: 600px;
+    width: auto;
+    animation: fadeDown 1s ease;
+}
+
+.pjText {
+    animation: opShow 1s ease;
+    font-size: 1em;
+    text-align: justify;
+    text-indent: 40px;
+}
+
+.hideContent {
+    animation: fadeUpHide 1s ease;
+}
+
+.hideText {
+    animation: opHide 1s ease;
+}
+
+.hideImgPjEx {
+    animation: fadeUpImage 1s ease;
+}
+
+.pjContent>.imgProjects {
+    animation: opShow 2s ease;
+}
+
+.AnimListSkill li {
+    animation: fadeDownList var(--ListDelayAnimWebPJ--) ease-in both;
+}
+
+.AnimListSkill li:nth-child(1) {
+    animation-delay: calc(var(--ListDelayAnimWebPJ--) + 0.5s);
+}
+.AnimListSkill li:nth-child(2) {
+    animation-delay: calc(var(--ListDelayAnimWebPJ--) + 0.75s);
+}
+.AnimListSkill li:nth-child(3) {
+    animation-delay: calc(var(--ListDelayAnimWebPJ--) + 1s);
+}
+
+@media screen and (max-width: 600px) {
+    .imgPjEx {
+        width: 150px;
+        height: 80px;
+        margin-left: 0px;
+        animation: fadeDownImageMax600 1s ease;
+    }
+    .pjText {
+        font-size: 0.5em;
+    }
+
+    .hideImgPjEx {
+        animation: fadeUpImageMax600 1s ease;
+    }
+    .pjContent {
+        height: 400px;
+        width: auto;
+        animation: fadeDownMax600 1s ease;
+    }
+
+    .hideContent {
+        animation: fadeUpHide 1s ease;
+    }
+}
+
+@media screen and (min-width: 600px){
+    .imgPjEx {
+        width: 300px;
+        height: 155px;
+        margin-left: 10px;
+        animation: fadeDownImage 1s ease;
+    }
+    .pjText {
+        font-size: 1em;
+    }
+
+    .hideImgPjEx {
+        animation: fadeUpImage 1s ease;
+    }
+    .pjContent {
+        height: 600px;
+        width: auto;
+        animation: fadeDown 1s ease;
+    }
+
+    .hideContent {
+        animation: fadeUpHide 1s ease;
+    }
+}
+
+@keyframes fadeDown {
+    0% {
+        height: 0px;
+    }
+
+    100% {
+        height: 600px;
+    }
+}
+
+@keyframes fadeDownMax600 {
+    0% {
+        height: 0px;
+    }
+
+    100% {
+        height: 400px;
+    }
+}
+
+@keyframes fadeUpHide {
+    0% {
+        height: 600;
+    }
+
+    100% {
+        height: 0px;
+    }
+}
+
+@keyframes fadeDownImage {
+    0% {
+        height: 0;
+        opacity: 0;
+    }
+    50% {
+
+        opacity: 0;
+    }
+
+    100% {
+        height: 155px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeDownImageMax600 {
+    0% {
+        height: 0;
+    }
+
+    100% {
+        height: 80px;
+    }
+}
+
+@keyframes fadeUpImage {
+    0% {
+        height: 155px;
+        opacity: 1;
+    }
+
+    80% {
+        height: 0;
+        opacity: 0;
+    }
+
+    100% {
+        height: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeUpImageMax600 {
+    0% {
+        height: 80px;
+        opacity: 1;
+    }
+
+    80% {
+        height: 0;
+        opacity: 0;
+    }
+
+    100% {
+        height: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes opShow {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes opHide {
+    0% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes opShowFullSizeImg {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 80%;
+    }
+}
+
+@keyframes fadeDownList {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -20%, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
 
