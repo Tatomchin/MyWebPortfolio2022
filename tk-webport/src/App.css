@@ -101,7 +101,6 @@ body {
 }
 
 #Contact {
-  /* background-color: darkorange; */
   width: auto;
   display: flex;
   flex-wrap: wrap;
@@ -109,7 +108,8 @@ body {
   padding-top: 65px;
   padding-bottom: 65px;
   width: 100%;
-  background-color: #A5C0DD;
+  /* background-color: #A5C0DD; */
+  background-color: #6C9BCF;
 }
 
 @media screen and (max-width: 430px) {

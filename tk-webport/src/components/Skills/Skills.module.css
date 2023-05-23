@@ -1,43 +1,61 @@
-:root{
+:root {
     --opacityBG--: 0;
 }
 
-.SkillBg{
+.SkillBg {
+    background-color: rgb(198, 199, 212);
+    border: 4px solid #32639b;
+    border-radius: 15px;
+    width: auto;
+    height: auto;
+    padding: 20px;
+    margin: 0 10px;
+    justify-content: center;
+    align-items: center;
     position: relative;
     opacity: var(--opacityBG--);
 }
 
-.SkillBgAnim{
-    animation: fadeUp 1s ease-in-out;
+.SkillBgAnim {
+    animation: fadeUp 0.25s ease-in-out;
 }
 
-.SkillBg >h2{
+.HeadSkill {
     position: relative;
     text-align: center;
-    color: rgb(95, 58, 2);
+    display: flex;
+    justify-content: center;
+}
+
+.HeadSkill>h2 {
+    width: 200px;
+    height: auto;
+    background-color: #00326b;
+    border-radius: 10px;
+    color: white;
     z-index: 1;
 }
 
-#bgPaper{
+#bgPaper {
     position: absolute;
     z-index: 0;
 }
 
-@media screen and (max-width: 600px){
-    .SkillBg{
+@media screen and (max-width: 600px) {
+    .SkillBg {
         width: auto;
         height: auto;
         padding-top: 30px;
         padding-bottom: 50px;
         margin: 0 10px;
     }
-    
-    .SkillBg >h2{
+
+    .SkillBg>h2 {
         text-align: center;
         margin-bottom: 10px;
     }
-    
-    #bgPaper{
+
+    #bgPaper {
         top: 0;
         left: -35px;
         height: 100%;
@@ -45,17 +63,18 @@
     }
 }
 
-@media screen and (min-width: 400px){
-    .SkillBg{
+@media screen and (min-width: 400px) {
+    .SkillBg {
         width: auto;
         height: auto;
         padding: 40px;
         padding-top: 30px;
         padding-bottom: 50px;
         margin: 0 10px;
+        border-radius: 15px;
     }
 
-    #bgPaper{
+    #bgPaper {
         top: 0;
         left: -20px;
         height: 100%;
@@ -63,24 +82,24 @@
     }
 }
 
-@media screen and (min-width: 600px){
-    .SkillBg{
+@media screen and (min-width: 600px) {
+    .SkillBg {
         width: auto;
         height: auto;
-        padding: 120px;
+        padding: 60px;
         padding-top: 30px;
         padding-bottom: 50px;
         margin: 0 10px;
     }
-    
-    
-    .SkillBg >h2{
+
+
+    .SkillBg>h2 {
         position: relative;
         text-align: center;
         margin-bottom: 10px;
     }
-    
-    #bgPaper{
+
+    #bgPaper {
         top: 0;
         left: 0;
         height: 100%;
@@ -89,12 +108,13 @@
 }
 
 @keyframes fadeUp {
-	0% {
+    0% {
         top: 30px;
-		opacity: 0;
-	}
-	100% {
+        opacity: 0;
+    }
+
+    100% {
         top: 0px;
-		opacity: 1;
-	}
+        opacity: 1;
+    }
 }

@@ -39,17 +39,19 @@ function App() {
       setST_ProjectTagTop(false)
     } else { setST_SkillTagTop(false) }
 
-    if (contactTagTop.top <= 10) {
+    if (projectTagTop.top <= 60) {
+      setST_SkillTagTop(false)
+      setST_ContactTagTop(false)
+      setST_ProjectTagTop(true)
+    } else { setST_ProjectTagTop(false) }
+
+    if (contactTagTop.top <= 100) {
       setST_SkillTagTop(false)
       setST_ContactTagTop(true)
       setST_ProjectTagTop(false)
     } else { setST_ContactTagTop(false) }
 
-    if (projectTagTop.top <= 10) {
-      setST_SkillTagTop(false)
-      setST_ContactTagTop(false)
-      setST_ProjectTagTop(true)
-    } else { setST_ProjectTagTop(false) }
+
   };
 
   useEffect(() => {

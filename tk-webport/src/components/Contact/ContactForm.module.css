@@ -1,0 +1,108 @@
+.ContactForm {
+    text-align: center;
+    width: 100%;
+    font-weight: 700;
+}
+
+.ContactForm>input {
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    width: 380px;
+}
+
+
+.ContactForm>textarea {
+    resize: none;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    width: 380px;
+}
+
+.ContactForm>p>button{
+    background-color: #00326b;
+    color: rgb(255, 255, 255);
+    width: 80px;
+    height: 30px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.ContactForm>p>button:hover{
+    cursor: pointer;
+    box-shadow: 0 0 10px rgb(55, 82, 136);
+}
+
+@media screen and (max-width: 600px) {
+    .ContactForm {
+        text-align: center;
+        width: 100%;
+    }
+
+    .ContactForm>input {
+        padding: 12px 20px;
+        width: 100%;
+    }
+
+
+    .ContactForm>textarea {
+        padding: 12px 20px;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .ContactForm {
+        text-align: center;
+        width: 100%;
+    }
+
+    .ContactForm>input {
+        padding: 12px 20px;
+        width: 100%
+    }
+
+
+    .ContactForm>textarea {
+        padding: 12px 20px;
+        width: 100%
+    }
+}
+
+
+/* ANIMATION FORM */
+.AnimName {
+    animation: fadeDownList 0.25s ease-in both;
+    animation-delay: calc(0.25s + 0.5s);
+}
+
+.AnimEmail {
+    animation: fadeDownList 0.25s ease-in both;
+    animation-delay: calc(0.25s + 0.75s);
+}
+
+.AnimMessage {
+    animation: fadeDownList 0.25s ease-in both;
+    animation-delay: calc(0.25s + 1s);
+}
+
+.AnimInputText {
+    animation: fadeDownList 0.25s ease-in both;
+    animation-delay: calc(0.25s + 0.5s);
+}
+
+@keyframes fadeDownList {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -20%, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}

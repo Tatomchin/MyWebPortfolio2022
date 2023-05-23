@@ -10,18 +10,18 @@ import paper from '../../picture/section2/paper.png';
 
 let animSkillBg = null;
 function Skills() {
-    const [ skillImg , skillImgisVisible ] = useInView({threshold: 0.3});
-    if (skillImgisVisible === true && animSkillBg === null){
+    const [ skillBG , skillBGisVisible ] = useInView({threshold: 0.3});
+    if (skillBGisVisible === true && animSkillBg === null){
         animSkillBg = styles.SkillBgAnim;
         document.documentElement.style.setProperty('--opacityBG--', 1);
     }
     return (
-        <div className={`${styles.SkillBg} ${animSkillBg}`}>
-            <img id={styles.bgPaper} className={``} src={paper} alt="Paper" ref={skillImg}/>
-            <h2>MY SKILLS</h2>
-            <WebDevSkills TagObserve={skillImgisVisible}/>
-            <GameDevSkills TagObserve={skillImgisVisible}/>
-            <ProgramingL TagObserve={skillImgisVisible}/>
+        <div className={`${styles.SkillBg} ${animSkillBg}`} ref={skillBG}>
+            {/* <img id={styles.bgPaper} className={``} src={paper} alt="Paper" ref={skillImg}/> */}
+            <div className={styles.HeadSkill}><h2>MY SKILLS</h2></div>
+            <WebDevSkills TagObserve={skillBGisVisible}/>
+            <GameDevSkills TagObserve={skillBGisVisible}/>
+            <ProgramingL TagObserve={skillBGisVisible}/>
         </div>
     )
 }
