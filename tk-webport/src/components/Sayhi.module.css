@@ -6,7 +6,7 @@
 }
 
 .SayhiBg>h1 {
-    /* background-color: #19376D; */
+    /* background-color: #19376D; */  
 }
 
 .SayhiBg>h2 {}
@@ -17,7 +17,10 @@
 
 #myName {
     color: rgb(255, 255, 255);
+    
     animation: blinkName 30s ease infinite;
+    
+
     font-size: 0.8em;
 }
 
@@ -58,7 +61,10 @@
         text-align: justify;
     }
 
-    #myName {}
+    #myName {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
 
     #career {
         line-height: auto;
@@ -85,10 +91,11 @@
     }
 
     .SayhiBg>h1 {
-        text-align: left;
-        font-size: 1em;
+        font-size: 1.3em;
         margin-top: 0.1em;
         margin-bottom: -0.2em;
+        text-align: center;
+        display: inline-block;
     }
 
     .SayhiBg>h2 {
@@ -99,13 +106,16 @@
     .SayhiBg>p {
         font-size: 0.9em;
         font-weight: 500;
-
         margin-top: 20px;
         text-align: start;
     }
-    
 
-    #myName {font-size: 1.2em;}
+
+    #myName {
+        font-size: 1em;
+        display: inline;
+        margin-left: 10px;
+    }
 
     #career {
         line-height: 1.1;
@@ -141,7 +151,9 @@
         font-weight: 500;
     }
 
-    #myName {font-size: 1em;}
+    #myName {
+        font-size: 1em;
+    }
 
     #career {
         line-height: 1.1;
@@ -158,6 +170,7 @@
         height: 385px;
         margin-left: 20px;
     }
+
     .SayhiBg>h1 {
         font-size: 2.2em;
     }
@@ -165,7 +178,12 @@
     .SayhiBg>h2 {
         font-size: 1.7em;
     }
-    #myName {font-size: 0.8em;}
+
+    #myName {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 1.5em;
+    }
 
     .SayhiBg>p {
         font-size: 1.5em;
@@ -174,33 +192,37 @@
 
 @keyframes blinkName {
     0% {
-        color: rgb(255, 0, 0);
+        color: rgb(0, 145, 255);
         text-shadow: 0 0 10px rgb(255, 255, 255);
     }
 
-    20% {
-        color: rgb(152, 144, 1);
+    5% {
+        color: rgb(255, 255, 255);
         text-shadow: 0 0 10px rgb(255, 255, 255);
     }
 
-    40% {
-        color: rgb(13, 127, 5);
+    30% {
+        color: rgb(255, 106, 0);
         text-shadow: 0 0 10px rgb(255, 255, 255);
     }
+
+    35% {
+        color: rgb(255, 255, 255);
+        text-shadow: 0 0 10px rgb(255, 255, 255);
+    }
+
     60% {
-        color: rgb(0, 98, 255);
-        text-shadow: 0 0 10px rgb(255, 255, 255);
-    }
-
-    80% {
         color: rgb(255, 0, 170);
         text-shadow: 0 0 10px rgb(255, 255, 255);
     }
 
-    100% {
-        color: rgb(255, 0, 0);
+    65% {
+        color: rgb(255, 255, 255);
         text-shadow: 0 0 10px rgb(255, 255, 255);
     }
-
+    100% {
+        color: rgb(0, 145, 255);
+        text-shadow: 0 0 10px rgb(255, 255, 255);
+    }
 
 }
