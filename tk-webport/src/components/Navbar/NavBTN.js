@@ -1,7 +1,6 @@
 import { useContext } from 'react';
 import { ConData } from '../../App.js'
 import styles from './Navbar.module.css'
-// import React, { useState, useEffect } from 'react';
 
 function NavBTN() {
     const {st_SkillTagTop, st_ContactTagTop, st_ProjectTagTop} = useContext(ConData);

@@ -12,7 +12,6 @@ function WebDevSkills({ TagObserve }) {
     const [listUL, listULisVisible] = useInView();
     if (TagObserve === true && listULisVisible === true && animListSkill === null) {
         animListSkill = styles.AnimListSkill;
-        console.log(animListSkill);
         setTimeout(() => {
             document.documentElement.style.setProperty('--ListVisibility--', 'visible');
         }, 1000);

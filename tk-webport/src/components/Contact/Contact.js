@@ -19,6 +19,8 @@ let animLabelName = null;
 let animLabelEmail = null;
 let animLabelMassage = null;
 
+
+
 function Contact() {
     const [ContactBg, ContactBgIsVisible] = useInView({ threshold: 0.3 });
     if (ContactBgIsVisible === true && animContactBg === null) {
@@ -32,7 +34,7 @@ function Contact() {
     }
     return (
         <div className={`${styles.ContactBg} ${animContactBg}`} ref={ContactBg}>
-            <img id={styles.stampPic} src={picStamp} alt='stamp'/>
+            <img id={styles.stampPic} src={picStamp} alt='stamp' />
             <div id={styles.headContct}>
                 <h2 className={styles.headContct}>CONTACT</h2>
             </div>
@@ -42,12 +44,12 @@ function Contact() {
             </div>
             <div className={styles.ContactICON}>
                 <ul className={`${styles.ListContact} ${animListContact}`}>
-                    <li><p><img class={styles.imgLogo} src={picEmail} alt='e-mail' />tom.kowprasert@gmail.com</p></li>
-                    <li><p><img class={styles.imgLogo} src={picLine} alt='Line' />tom.kowprasert</p></li>
-                    <li><p><img class={styles.imgLogo} src={picPhone} alt='Telephone number' />+6662-363-1016</p></li>
-                    <li><p><img class={styles.imgLogo} src={picFB} alt='Facebook' />TK Techin Kowprasert</p></li>
-                    <li><p><img class={styles.imgLogo} src={picGithub} alt='Github' />Tatomchin</p></li>
-                    <li><p><img class={styles.imgLogo} src={picLinkedin} alt='Linkedin' />Techin Kowprasert</p></li>
+                    <li><p><a  href = "mailto: tom.kowprasert@gmail.com"><img class={styles.imgLogo} src={picEmail} alt='e-mail' />tom.kowprasert@gmail.com</a></p></li>
+                    <li><p><a  href = "https://line.me/ti/p/Kz7ELZgIw8?fbclid=IwAR2P8Q7GJX3aHni3DOZsIfhHH-H0dHkwkMupSArjItcOruqg8FKQCrroeHI"><img class={styles.imgLogo} src={picLine} alt='Line' />tom.kowprasert</a></p></li>
+                    <li><p><a  href = "tel: +6662-363-1016"><img class={styles.imgLogo} src={picPhone} alt='Telephone number' />+6662-363-1016</a></p></li>
+                    <li><p><a  href = "https://www.facebook.com/tomkung.kowprasert/"><img class={styles.imgLogo} src={picFB} alt='Facebook' />TK Techin Kowprasert</a></p></li>
+                    <li><p><a  href = "https://github.com/Tatomchin"><img class={styles.imgLogo} src={picGithub} alt='Github' />Tatomchin</a></p></li>
+                    <li><p><a  href = "https://www.linkedin.com/in/techin-kowprasert-9a3a08263"><img class={styles.imgLogo} src={picLinkedin} alt='Linkedin' />Techin Kowprasert</a></p></li>
                 </ul>
             </div>
         </div>

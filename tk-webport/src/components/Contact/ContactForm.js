@@ -1,18 +1,19 @@
 // Make sure to run npm install @formspree/react
 // For more help visit https://formspr.ee/react-help
 import styles from './ContactForm.module.css'
-import React from 'react';
 import { useForm, ValidationError } from '@formspree/react';
 function ContactForm({ animInputText, animLabelName, animLabelEmail, animLabelMassage }) {
   const [state, handleSubmit] = useForm("mvonyjkd");
   if (state.succeeded) {
-    setTimeout(() => {
-      
-    }, 1000);
     return (
-    <div>
-      <p>Thanks for joining!</p>
-    </div>
+      <div className={styles.MessageReceived}>
+        <div className={styles.MessageSucces}>
+          <div id={styles.bgMessage}> </div>
+          <h4>Message has been sent,<br />
+            Thank you for contact me.
+          </h4>
+        </div>
+      </div>
     )
   }
   return (
@@ -67,6 +68,6 @@ function ContactForm({ animInputText, animLabelName, animLabelEmail, animLabelMa
           Send
         </button></p>
     </form>
-  );
+  )
 }
 export default ContactForm;

@@ -60,6 +60,7 @@ body {
 }
 
 #Techin {
+  position: relative;
   margin: 0 auto;
   padding: 40px;
   padding-top: calc(65px + 40px);
@@ -70,11 +71,12 @@ body {
   align-items: center; */
   background-color: #6C9BCF;
   position: relative;
-
+  z-index: -1;
 }
 
 
 #Skills {
+  position: relative;
   /* background-color: red; */
   width: auto;
   display: flex;
@@ -86,9 +88,9 @@ body {
   background-color: #6C9BCF;
 }
 
-@media screen and (max-width: 800px) {}
 
 #Projects {
+  position: relative;
   /* background-color: greenyellow; */
   width: auto;
   display: flex;
@@ -101,6 +103,7 @@ body {
 }
 
 #Contact {
+  position: relative;
   width: auto;
   display: flex;
   flex-wrap: wrap;
@@ -112,9 +115,316 @@ body {
   background-color: #6C9BCF;
 }
 
+#scrollToTop {
+  position: fixed;
+  right: 10%;
+  bottom: 70px;
+  width: 0px;
+  height: 0px;
+  z-index: 200;
+  opacity: 0.4;
+  transition: opacity 1s;
+  animation: fadeIn 0.75s ease;
+}
+
+#scrollToTop:hover {
+  opacity: 1;
+}
+
+.HideScrollUp {
+  opacity: 0.2;
+}
+
+#imgArrowScrollTop {
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 0;
+}
+
+#imgArrowScrollTop:hover {
+  animation: Updown 0.5s ease infinite;
+  opacity: 1;
+  cursor: pointer;
+}
+
+#imgGearScrollTop {
+  position: absolute;
+  width: 70%;
+  height: 70%;
+}
+
+#imgGear4 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 200px;
+}
+
+.imgGear {
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+
 @media screen and (max-width: 430px) {
   #Techin {
     padding: 0;
     padding-top: 40px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  #scrollToTop {
+    right: 5px;
+    bottom: 70px;
+    width: 50px;
+    height: 65px;
+  }
+
+  #imgArrowScrollTop {
+    position: absolute;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    left: 50%;
+    transform: translate(-50%, -0%);
+    padding-bottom: 50px;
+    z-index: 201;
+  }
+
+  #imgGearScrollTop {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    right: 7px;
+    bottom: 0;
+    transform: rotate(var(--scrollRotate--));
+  }
+
+  #imgGearScrollTop:hover {
+    cursor: pointer;
+  }
+
+}
+
+@media screen and (min-width: 700px){
+  #imgGearSkill_L1 {
+    top: 160px;
+    left: 30px;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+    animation: rotateGear 40s linear infinite;
+  }
+
+  #imgGearSkill_L2 {
+    top: 300px;
+    left: 15px;
+    width: 50px;
+    height: 50px;
+    animation: ReRotateGear 15s linear infinite;
+  }
+
+  #imgGearSkill_L3 {
+    top: 330px;
+    left: 0px;
+    width: 250px;
+    height: 250px;
+    animation: rotateGear 30s linear infinite;
+  }
+
+  #imgGearSkill_R1 {
+    top: 250px;
+    right: 30px;
+    width: 150px;
+    height: 150px;
+    animation: rotateGear 30s linear infinite;
+  }
+
+  #imgGearSkill_R2 {
+    top: 400px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    animation: ReRotateGear 15s linear infinite;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  #imgGearSkill_L1 {
+    top: 120px;
+    left: 130px;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    animation: rotateGear 40s linear infinite;
+  }
+
+  #imgGearSkill_L2 {
+    top: 280px;
+    left: 80px;
+    width: 100px;
+    height: 100px;
+    animation: ReRotateGear 15s linear infinite;
+  }
+
+  #imgGearSkill_L3 {
+    top: 350px;
+    left: 90px;
+    width: 300px;
+    height: 300px;
+    animation: rotateGear 30s linear infinite;
+  }
+
+  #imgGearSkill_R1 {
+    top: 150px;
+    right: 100px;
+    width: 300px;
+    height: 300px;
+    animation: rotateGear 30s linear infinite;
+  }
+
+  #imgGearSkill_R2 {
+    top: 450px;
+    right: 150px;
+    width: 150px;
+    height: 150px;
+    animation: ReRotateGear 15s linear infinite;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  #imgGearSkill_L1 {
+    top: 120px;
+    left: 300px;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    animation: rotateGear 60s linear infinite;
+  }
+
+  #imgGearSkill_L2 {
+    top: 290px;
+    left: 250px;
+    width: 100px;
+    height: 100px;
+    animation: ReRotateGear 20s linear infinite;
+  }
+
+  #imgGearSkill_L3 {
+    top: 350px;
+    left: 280px;
+    width: 300px;
+    height: 300px;
+    animation: rotateGear 80s linear infinite;
+  }
+
+  #imgGearSkill_R1 {
+    top: 150px;
+    right: 250px;
+    width: 300px;
+    height: 300px;
+    animation: rotateGear 50s linear infinite;
+  }
+
+  #imgGearSkill_R2 {
+    top: 450px;
+    right: 360px;
+    width: 150px;
+    height: 150px;
+    animation: ReRotateGear 20s linear infinite;
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  #imgGearSkill_L1 {
+    top: 120px;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    animation: rotateGear 60s linear infinite;
+  }
+
+  #imgGearSkill_L2 {
+    top: 290px;
+    left: 27%;
+    width: 100px;
+    height: 100px;
+    animation: ReRotateGear 20s linear infinite;
+  }
+
+  #imgGearSkill_L3 {
+    top: 350px;
+    left: 28%;
+    width: 300px;
+    height: 300px;
+    animation: rotateGear 80s linear infinite;
+  }
+
+  #imgGearSkill_R1 {
+    top: 150px;
+    right: 25%;
+    width: 300px;
+    height: 300px;
+    animation: rotateGear 50s linear infinite;
+  }
+
+  #imgGearSkill_R2 {
+    top: 450px;
+    right: 30%;
+    width: 150px;
+    height: 150px;
+    animation: ReRotateGear 20s linear infinite;
+  }
+}
+
+@keyframes Updown {
+  0% {
+    top: 0px;
+    opacity: 1;
+  }
+
+  50% {
+    top: -10px;
+    opacity: 0.9;
+  }
+
+  100% {
+    top: -0px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    transform: translate3d(0, -20%, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes rotateGear {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes ReRotateGear {
+  0% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(0);
   }
 }

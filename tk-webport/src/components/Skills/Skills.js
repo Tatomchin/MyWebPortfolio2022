@@ -6,8 +6,6 @@ import WebDevSkills from './WebDevSkills.js';
 
 import { useInView } from 'react-intersection-observer';
 
-import paper from '../../picture/section2/paper.png';
-
 let animSkillBg = null;
 function Skills() {
     const [ skillBG , skillBGisVisible ] = useInView({threshold: 0.3});

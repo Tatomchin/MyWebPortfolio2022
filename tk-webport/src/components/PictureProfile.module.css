@@ -3,6 +3,7 @@
     height: auto;
     margin: 10px 10px;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: flex-end;
     position: relative;
@@ -35,6 +36,26 @@
     z-index: 1;
 }
 
+.listIcon {
+    list-style: none;
+    padding: 0;
+    padding-left: 0;
+    margin-top: 20px;
+}
+
+.listIcon>li>a {
+    padding-top: 0px;
+}
+
+.listProfileimgLogo {
+    width: 20px;
+    margin-left: 10px;
+}
+
+.listProfileimgLogo:hover {
+    filter: drop-shadow(0 0 10px #858585);
+}
+
 @media screen and (max-width: 600px) {
     .PictureBg {
         justify-content: center;
@@ -58,7 +79,35 @@
         width: 0;
         height: 0;
     }
+
+    .listIcon {
+        list-style: none;
+        display: block;
+        margin-top: 30px;
+    }
+
+    .listIcon li {
+        animation: fadeLeft 0.5s ease-in both;
+    }
+
+    .listIcon li:nth-child(1) {
+        animation-delay: calc(0.5s + 0.5s);
+    }
+
+    .listIcon li:nth-child(2) {
+        animation-delay: calc(0.5s + 0.75s);
+    }
+
+    .listIcon li:nth-child(3) {
+        animation-delay: calc(0.5s + 1s);
+    }
+
+    .listIcon li:nth-child(4) {
+        animation-delay: calc(0.5s + 1.25s);
+    }
+
 }
+
 
 @media screen and (min-width: 600px) {
     .PictureBg {
@@ -68,7 +117,7 @@
         margin-bottom: auto;
         margin: 10px 10px;
         justify-content: center;
-        
+
     }
 
     #myPicture {
@@ -79,7 +128,7 @@
     #tape1 {
         width: 90px;
         height: 70px;
-        top: 30px;
+        top: 0px;
         left: -35px;
         transform: scaleX(0.5);
         rotate: -45deg;
@@ -88,10 +137,38 @@
     #tape2 {
         width: 90px;
         height: 70px;
-        bottom: 30px;
+        bottom: 70px;
         right: -35px;
         transform: scaleX(0.5);
         rotate: -45deg;
+    }
+
+    .listIcon {
+        list-style: none;
+        display: flex;
+        padding: 0;
+        padding-left: 0;
+        margin-top: -50px;
+    }
+
+    .listIcon li {
+        animation: fadeIn 0.5s ease-in both;
+    }
+
+    .listIcon li:nth-child(1) {
+        animation-delay: calc(0.5s + 0.5s);
+    }
+
+    .listIcon li:nth-child(2) {
+        animation-delay: calc(0.5s + 0.75s);
+    }
+
+    .listIcon li:nth-child(3) {
+        animation-delay: calc(0.5s + 1s);
+    }
+
+    .listIcon li:nth-child(4) {
+        animation-delay: calc(0.5s + 1.25s);
     }
 }
 
@@ -110,17 +187,21 @@
     #tape1 {
         width: 100px;
         height: 100px;
-        top: 0px;
-        left: -15px;
+        top: -25px;
+        left: -20px;
         transform: scaleX(0.75);
     }
 
     #tape2 {
         width: 100px;
         height: 100px;
-        bottom: 5px;
-        right: -30px;
+        bottom: 40px;
+        right: -25px;
         transform: scaleX(0.75);
+    }
+
+    .listIcon {
+        margin-top: 0px;
     }
 }
 
@@ -131,15 +212,48 @@
     }
 
     #tape1 {
-        top: 25px;
+        top: -10px;
         left: -45px;
         transform: scale(1);
     }
 
     #tape2 {
-        bottom: 30px;
+        bottom: 75px;
         right: -45px;
         transform: scale(1);
     }
 
+    .listProfileimgLogo {
+        width: 30px;
+        margin-left: 15px;
+    }
+
+    .listIcon {
+        margin-left: -15px;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -20%, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+
+@keyframes fadeLeft {
+    from {
+        opacity: 0;
+        transform: translate3d(-20%, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
 }

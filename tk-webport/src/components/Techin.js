@@ -14,7 +14,7 @@ import tailLetter from '../picture/section1/TailLetter.png';
 
 
 function Techin() {
-    const { windowDimension } = useContext(ConData);
+    const {st_scrollTagtop, windowDimension } = useContext(ConData);
     const [clipboardAxis, setClipboardAxis] = useState(null);
     const [checkClipboardAxis, setCheckClipboardAxis] = useState(true);
 
@@ -25,7 +25,6 @@ function Techin() {
         setClipboardAxis(clipboardH);
         setCheckClipboardAxis(true);
     }
-    
     if (checkClipboardAxis === true && windowDimension.winWidth < 600 && !!clipboardAxis) {
         setClipboardAxis(clipboardV);
         setCheckClipboardAxis(false);
@@ -33,13 +32,12 @@ function Techin() {
         setClipboardAxis(clipboardH);
         setCheckClipboardAxis(true);
     }
-
     return (
         <div id={styles.TechinIn}>
             {/* <img id={styles.imgGear1} src={imgGear1} alt="Gear1" />
             <img id={styles.imgGear2} src={imgGear2} alt="Gear2" />
             <img id={styles.imgGear3} src={imgGear3} alt="Gear3" /> */}
-
+            
             <div id={styles.clipboard}>
                 <img id={styles.imgClipboard} src={clipboardAxis} alt="Clipboard" />
                 <PictureProfile />
@@ -48,7 +46,7 @@ function Techin() {
                 <img id={styles.imgTailLetter} src={tailLetter} alt="TailLetter" />
             </div>
 
-            <div id={styles.ScrollDown}>
+            <div id={styles.ScrollDown} className={`${st_scrollTagtop ? '': styles.ScrollDownFadeOut} `}>
                 <a href="#Skills"><span></span>Scroll Down</a>
             </div>
         </div>

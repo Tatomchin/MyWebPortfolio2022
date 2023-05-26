@@ -22,7 +22,7 @@
     width: 380px;
 }
 
-.ContactForm>p>button{
+.ContactForm>p>button {
     background-color: #00326b;
     color: rgb(255, 255, 255);
     width: 80px;
@@ -32,9 +32,71 @@
     font-weight: 600;
 }
 
-.ContactForm>p>button:hover{
+.ContactForm>p>button:hover {
     cursor: pointer;
     box-shadow: 0 0 10px rgb(55, 82, 136);
+}
+
+.MessageReceived {
+    text-align: center;
+    width: 100%;
+    font-weight: 700;
+    position: relative;
+    
+}
+
+.MessageSucces {
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.MessageSucces > h4{
+    width: 200px;
+    position: absolute;
+    top: 40%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    animation: opac 1s ease-out;
+}
+
+#bgMessage{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    border: 10px dashed black;
+    animation: rottating 3s ease-out;
+}
+
+@keyframes rottating {
+    0% {
+        border-radius: 0%;
+        transform: rotate(0deg);
+        opacity: 0;
+    }
+
+    80% {
+        opacity: 1;
+    }
+    100%{
+        border-radius: 100%;
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes opac {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -53,12 +115,51 @@
         padding: 12px 20px;
         width: 100%;
     }
+
+    .MessageReceived {
+        text-align: center;
+        width: 100%;
+        height: 416px;
+        font-weight: 700;
+        position: relative;
+        
+    }
+    
+    .MessageSucces {
+        width: 200px;
+        height: 200px;
+        border-radius: 100%;
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .MessageSucces > h4{
+        width: 200px;
+        position: absolute;
+        top: 40%;
+        left: 55%;
+        transform: translate(-50%, -50%);
+     font-size: 0.9em;
+    }
+    
+    #bgMessage{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 100%;
+        border: 10px dashed black;
+        animation: rottating 3s ease-out;
+    }
+
 }
 
 @media screen and (min-width: 600px) {
     .ContactForm {
         text-align: center;
         width: 100%;
+        height: 400px;
     }
 
     .ContactForm>input {
@@ -71,7 +172,53 @@
         padding: 12px 20px;
         width: 100%
     }
+
+    .MessageReceived {
+        text-align: center;
+        width: 100%;
+        height: 416px;
+        font-weight: 700;
+        position: relative;
+        
+    }
+    
+    .MessageSucces {
+        width: 200px;
+        height: 200px;
+        border-radius: 100%;
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .MessageSucces > h4{
+        width: 200px;
+        position: absolute;
+        top: 40%;
+        left: 55%;
+        transform: translate(-50%, -50%);
+     font-size: 0.9em;
+    }
+    
+    #bgMessage{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 100%;
+        border: 10px dashed black;
+        animation: rottating 3s ease-out;
+    }
 }
+
+@media screen and (min-width: 650px) {
+
+}
+
+@media screen and (min-width: 1000px) {
+    
+}
+
 
 
 /* ANIMATION FORM */

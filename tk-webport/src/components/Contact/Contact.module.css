@@ -75,6 +75,10 @@
     font-size: 1em;
 }
 
+.ListContact>li>p:hover{
+    text-shadow: 0 0 5px rgb(91, 91, 91);
+}
+
 .AnimListContact li {
     animation: fadeDownList 0.25s ease-in both;
 }
@@ -144,7 +148,7 @@
 
 @media screen and (min-width: 600px) {
     .ContactBg {
-        width: 800px;
+        width: 480px;
         height: auto;
         padding: 40px;
         margin: 0 10px;
@@ -165,12 +169,12 @@
     }
 
     .ContactForm {
-        width: 60%;
+        width: 55%;
         height: auto;
     }
 
     .ContactICON {
-        width: 40%;
+        width: 45%;
         height: auto;
         padding-top: 0px;
     }
@@ -184,12 +188,21 @@
 }
 
 @media screen and (min-width: 650px) {
+    .ContactBg {
+        width: 600px;
+        height: auto;
+        padding: 40px;
+        margin: 0 10px;
+    }
     .ListContact {
         font-size: 0.7em;
     }
 }
 
 @media screen and (min-width: 1000px) {
+    .ContactBg {
+        width: 800px
+    }
     .ListContact {
         font-size: 1em;
     }

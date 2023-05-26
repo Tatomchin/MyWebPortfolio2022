@@ -13,7 +13,6 @@ import picdeadLineSpace2 from '../../picture/exProjects/game/dead-line-space/2.p
 import picdeadLineSpace3 from '../../picture/exProjects/game/dead-line-space/3.png';
 
 function ShowContentGamePJ({ showFullSizeImg, showFullSizeImgCer, contentNumber, hideContent, hideText, hideImgPjEx }) {
-    console.log(hideContent);
     const contentPJ = [
         (
             //DROP QUEST
