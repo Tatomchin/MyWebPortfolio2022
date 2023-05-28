@@ -11,8 +11,7 @@
 #clipboard {
     display: flex;
     flex-wrap: wrap;
-    /* background-color: #ddd; */
-    position: relative;
+    position: absolute;
     justify-content: center;
     z-index: 1;
 }
@@ -20,6 +19,56 @@
 #imgClipboard {
     position: absolute;
     z-index: 1;
+}
+
+#clipboardBack {
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    justify-content: center;
+    z-index: 1;
+}
+
+#imgClipboardBack {
+    position: absolute;
+    z-index: 1;
+}
+
+.arrowFlip {
+    z-index: 2;
+    cursor: pointer;
+}
+
+#arrowFlipTextFont {
+    position: absolute;
+    font-size: 0em;
+    background-color: rgb(8, 49, 98);
+    border-radius: 10px;
+    color: white;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#imgArrowFlipFont {
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+
+#arrowFlipTextBack {
+    position: absolute;
+    font-size: 0em;
+    background-color: rgb(8, 49, 98);
+    border-radius: 10px;
+    color: white;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#imgArrowFlipBack {
+    position: absolute;
+    width: 0;
+    height: 0;
 }
 
 #imgHeadLetter {
@@ -30,138 +79,6 @@
 #imgTailLetter {
     position: absolute;
     z-index: 0;
-}
-
-@keyframes fadeRightHead {
-    0% {
-        right: 395px;
-        z-index: 0;
-    }
-
-    40% {
-        right: 395px;
-        z-index: 0;
-        opacity: 1;
-    }
-
-    80% {
-        right: 350px;
-        opacity: 0
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes fadeRightHead1200 {
-    0% {
-        right: 580px;
-        z-index: 0;
-    }
-
-    40% {
-        right: 580px;
-        z-index: 0;
-        opacity: 1;
-    }
-
-    80% {
-        right: 540px;
-        opacity: 0
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes fadeRightTail {
-    0% {
-        right: 0;
-        z-index: 2;
-    }
-
-    40% {
-        right: 0;
-        z-index: 2;
-        opacity: 1;
-    }
-
-    80% {
-        right: -50px;
-        opacity: 0
-    }
-
-    100% {
-        opacity: 1;
-        z-index: 0;
-    }
-}
-
-@keyframes fadeRightTail600 {
-    0% {
-        right: -10px;
-        z-index: 2;
-    }
-
-    40% {
-        right: -10px;
-        z-index: 2;
-        opacity: 1;
-    }
-
-    80% {
-        right: -60px;
-        opacity: 0
-    }
-
-    100% {
-        opacity: 1;
-        z-index: 0;
-    }
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes ScrollfadeDown {
-	from {
-		opacity: 0;
-		transform: translate3d(0, -20%, 0);
-	}
-	to {
-		opacity: 1;
-		transform: translate3d(0, 0, 0);
-	}
-}
-
-@keyframes clipboardFlipY {
-    0% {
-        transform: rotateY(10deg) skewY(-10deg) scaleY(0.1);
-        opacity: 0.7;
-    }
-    30% {transform: rotateY(0deg);}
-    100% {
-        transform: rotateY(0deg) skewY(0deg) scaleY(1);
-        opacity: 1;}
-}
-
-@keyframes ScrollfadeDownMobile {
-    0% {
-        opacity: 0;
-        margin-top: -200px;
-    }
-    100% {
-        opacity: 1;
-        margin-top: -180px;
-    }
 }
 
 #ScrollDown {
@@ -201,7 +118,7 @@
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    background-color: rgb(252, 107, 107);
+    background-color: rgb(202, 120, 120);
     content: '';
     animation: down 1.5s linear infinite;
 }
@@ -209,23 +126,6 @@
 #ScrollDown>a {
     font-size: 1em;
 }
-
-@keyframes down {
-    0% {
-        opacity: 0;
-        top: 3px;
-    }
-
-    5% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-        top: 43px;
-    }
-}
-
 
 @media screen and (max-width: 600px) {
     #TechinIn {
@@ -237,20 +137,101 @@
         position: relative;
         width: 100%;
     }
+
     #clipboard {
-        width: 300px;
-        height: 700px;
-        margin-top: 20px;
-        animation: clipboardFlipY 2s ease-out;
+        width: 100%;
+        height: 100%;
+        /* animation: clipboardFlipY 2s ease-out; */
     }
 
     #imgClipboard {
-        height: 490px;
+        height: 100%;
         width: 100%;
         top: 0;
         left: 0;
     }
 
+    #arrowFlipTextFont {
+        font-size: 0.5em;
+        bottom: 2px;
+        right: 20px;
+    }
+
+    #imgArrowFlipFont {
+        width: 25px;
+        height: 25px;
+        right: 15px;
+        bottom: 25px;
+        transform: rotate(-90deg);
+    }
+
+    #arrowFlipTextBack {
+        font-size: 0.6em;
+        bottom: 45px;
+        right: 25px;
+    }
+
+    #imgArrowFlipBack {
+        width: 25px;
+        height: 25px;
+        right: 25px;
+        bottom: 75px;
+        transform: rotate(-90deg);
+    }
+
+    #clipboardBack {
+        width: 100%;
+        height: 100%;
+    }
+
+    #imgClipboardBack {
+        left: 0;
+        top: 0;
+        width: calc(100%);
+        height: 100%;
+        filter: drop-shadow(0px 0px 5px black);
+        margin-top: auto;
+    }
+
+    .flipBox {
+        background-color: transparent;
+        width: auto;
+        height: auto;
+        perspective: 1000px;
+    }
+
+    .flipBoxInner {
+        position: relative;
+        width: 300px;
+        height: 500px;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+        margin-top: 20px;
+    }
+
+    .flipBox:hover .flipBoxInner {
+        transform: rotateY(180deg);
+    }
+
+    .flipBoxFront,
+    .flipBoxBack {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+
+    .flipBoxFront {
+        color: black;
+    }
+
+    .flipBoxBack {
+        color: white;
+        transform: rotateY(180deg);
+    }
+
     #imgHeadLetter {
         width: 0;
         height: 0;
@@ -260,106 +241,343 @@
         width: 0;
         height: 0;
     }
+
     #ScrollDown {
         width: 100%;
         height: auto;
         padding: 0;
         margin-bottom: auto;
-        margin-top: -180px;
-        animation: ScrollfadeDownMobile 3s ease;
+        margin-top: 15px;
+        animation: ScrollfadeDownMobileMax600 1s ease;
     }
 
 }
 
+@media screen and (min-width: 400px) {
+    .flipBoxInner {
+        width: 350px;
+        height: 520px;
+    }
+
+    #ScrollDown {
+        margin-top: 20px;
+    }
+
+    #arrowFlipTextBack {
+        font-size: 0.6em;
+        bottom: 65px;
+        right: 30px;
+    }
+
+    #imgArrowFlipBack {
+        width: 25px;
+        height: 25px;
+        right: 30px;
+        bottom: 95px;
+        transform: rotate(-90deg);
+    }
+}
+
+@media screen and (width: 600px) {
+    #imgArrowFlipFont {
+        transform: rotate(0deg);
+    }
+    #imgArrowFlipBack {
+        transform: rotate(0deg);
+    }
+}
+
 @media screen and (min-width: 600px) {
     #clipboard {
-        margin-top: 10px;
-        padding: 20px;
-        padding-left: 50px;
-        width: auto;
+        margin-top: 0px;
+        padding-left: 25px;
+        width: 100%;
+        height: 100%;
         animation: fadeIn 1s ease;
-        height: auto;
     }
-    
+
     #imgClipboard {
-        left: -50px;
+        left: -70px;
         top: 0;
-        width: calc(100% + 60px);
+        width: calc(100% + 80px);
         height: 100%;
         filter: drop-shadow(0px 0px 5px black);
-
         margin-top: auto;
     }
-    
-    #imgHeadLetter {
-        width: 155px;
-        height: 351px;
-        top: -10px;
-        right: 376px;
-        animation: fadeRightHead 2s ease;
+
+    #clipboardBack {
+        margin-top: 0px;
+        padding-left: 25px;
+        width: 100%;
+        height: 100%;
     }
-    
+
+    #imgClipboardBack {
+        left: -70px;
+        top: 0;
+        width: calc(100% + 80px);
+        height: 100%;
+        filter: drop-shadow(0px 0px 5px black);
+        margin-top: auto;
+    }
+
+    #arrowFlipTextFont {
+        font-size: 0.5em;
+        bottom: 0;
+        right: 35px;
+    }
+
+    #imgArrowFlipFont {
+        width: 30px;
+        height: 30px;
+        right: 5px;
+        bottom: 10px;
+    }
+
+    #arrowFlipTextBack {
+        font-size: 0.5em;
+        bottom: 1px;
+        right: 75px;
+    }
+
+    #imgArrowFlipBack {
+        width: 30px;
+        height: 30px;
+        right: 45px;
+        bottom: 10px;
+    }
+
+    #imgHeadLetter {
+        width: 160px;
+        height: 327px;
+        top: -20px;
+        right: 340px;
+        animation: fadeRightHead600 2s ease;
+    }
+
     #imgTailLetter {
-        width: 530px;
-        height: 350px;
-        top: -10px;
-        right: -50px;
+        width: 520px;
+        height: 325px;
+        top: -20px;
+        right: -70px;
         animation: fadeRightTail600 2s ease;
+    }
+
+    .flipBox {
+        background-color: transparent;
+        width: auto;
+        height: auto;
+        perspective: 1000px;
+    }
+
+    .flipBoxInner {
+        position: relative;
+        width: 420px;
+        height: 280px;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+    }
+
+    .flipBox:hover .flipBoxInner {
+        transform: rotateX(180deg);
+    }
+
+    .flipBoxFront,
+    .flipBoxBack {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+
+    .flipBoxFront {
+        color: black;
+    }
+
+    .flipBoxBack {
+        color: white;
+        transform: rotateX(180deg);
     }
 
     #ScrollDown {
         height: 100px;
         width: 100%;
         padding: 20px;
-        margin-bottom: -20px;
-        margin-top: 36px;
+        margin-top: 50px;
         animation: ScrollfadeDown 1.5s ease;
     }
-    
+
+}
+
+@media screen and (width: 600px) {
+    #clipboard {
+        margin-top: -18px;
+    }
+
+    #clipboardBack {
+        margin-top: 20px;
+    }
 }
 
 @media screen and (min-width: 700px) {
-    #imgClipboard {
-        left: -65px;
-        top: 0;
-        width: calc(100% + 65px);
+    #clipboard {
+        margin-top: 0px;
+        padding-top: 15px;
+        padding-left: 45px;
+        width: 100%;
         height: 100%;
     }
+
+    #imgClipboard {
+        left: -70px;
+        top: 0;
+        width: calc(100% + 80px);
+        height: 100%;
+    }
+
+    #clipboardBack {
+        margin-top: -12px;
+        padding-top: 15px;
+        padding-left: 45px;
+        width: 100%;
+        height: 100%;
+    }
+
+    #imgClipboardBack {
+        left: -70px;
+        top: 0;
+        width: calc(100% + 80px);
+        height: 100%;
+    }
+
+    .flipBoxInner {
+        width: 550px;
+        height: 335px;
+    }
+
+    #arrowFlipTextFont {
+        font-size: 0.5em;
+        bottom: 5px;
+        right: 45px;
+    }
+
+    #imgArrowFlipFont {
+        width: 35px;
+        height: 35px;
+        right: 10px;
+        bottom: 15px;
+    }
+
+    #arrowFlipTextBack {
+        font-size: 0.6em;
+        bottom: 7px;
+        right: 95px;
+    }
+
+    #imgArrowFlipBack {
+        width: 35px;
+        height: 35px;
+        right: 60px;
+        bottom: 20px;
+    }
+
     #imgHeadLetter {
         width: 200px;
         height: 410px;
         top: -30px;
         right: 400px;
+        animation: fadeRightHead700 2s ease;
     }
-    
+
     #imgTailLetter {
-        width: 550px;
+        width: 600px;
         height: 410px;
         top: -30px;
-        right: -20px;
+        right: -70px;
+        animation: fadeRightTail700 2s ease;
     }
 }
 
 @media screen and (min-width: 1200px) {
     #clipboard {
-        padding: 30px;
-        padding-left: 110px;
+        margin-top: 0px;
+        padding-top: 15px;
+        padding-left: 45px;
+        width: 100%;
+        height: 100%;
+    }
+
+    #imgClipboard {
+        left: -130px;
+        top: 0;
+        width: calc(100% + 140px);
+        height: 100%;
+    }
+
+    #clipboardBack {
+        margin-top: -20px;
+        padding-top: 15px;
+        padding-left: 45px;
+        width: 100%;
+        height: 100%;
+    }
+
+    #imgClipboardBack {
+        left: -130px;
+        top: 0;
+        width: calc(100% + 140px);
+        height: 100%;
+    }
+
+    .flipBoxInner {
         width: 700px;
+        height: 470px;
+    }
+
+    #arrowFlipTextFont {
+        font-size: .8em;
+        padding-left: 7px;
+        padding-right: 7px;
+        bottom: 3px;
+        right: 60px;
+    }
+
+    #imgArrowFlipFont {
+        width: 40px;
+        height: 40px;
+        right: 20px;
+        bottom: 20px;
+    }
+
+    #arrowFlipTextBack {
+        font-size: .8em;
+        bottom: 28px;
+        right: 80px;
+    }
+
+    #imgArrowFlipBack {
+        width: 40px;
+        height: 40px;
+        right: 40px;
+        bottom: 45px;
     }
 
     #imgHeadLetter {
-        width: 250px;
+        width: 255px;
         height: 552px;
-        top: -30px;
-        right: 560px;
+        top: -31px;
+        right: 545px;
         animation: fadeRightHead1200 2s ease;
     }
 
     #imgTailLetter {
-        width: 750px;
+        width: 800px;
         height: 550px;
         top: -30px;
-        right: -20px;
+        right: -85px;
+        animation: fadeRightTail1200 2s ease;
     }
 }
 
@@ -382,5 +600,222 @@
 
     100% {
         opacity: 0;
+    }
+}
+
+@keyframes down {
+    0% {
+        opacity: 0;
+        top: 3px;
+    }
+
+    5% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        top: 43px;
+    }
+}
+
+@keyframes fadeRightHead600 {
+    0% {
+        right: 357px;
+        z-index: 0;
+    }
+
+    40% {
+        right: 357px;
+        z-index: 0;
+        opacity: 1;
+    }
+
+    80% {
+        right: 300px;
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeRightHead700 {
+    0% {
+        right: 405px;
+        z-index: 0;
+    }
+
+    40% {
+        right: 405px;
+        z-index: 0;
+        opacity: 1;
+    }
+
+    80% {
+        right: 390px;
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeRightHead1200 {
+    0% {
+        right: 570px;
+        z-index: 0;
+    }
+
+    40% {
+        right: 570px;
+        z-index: 0;
+        opacity: 1;
+    }
+
+    80% {
+        right: 540px;
+        opacity: 0
+    }
+
+    100% {
+        right: 545px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeRightTail600 {
+    0% {
+        right: -50px;
+        z-index: 2;
+    }
+
+    40% {
+        right: -50px;
+        z-index: 2;
+        opacity: 1;
+    }
+
+    80% {
+        right: -80px;
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1;
+        z-index: 0;
+        right: -70px;
+    }
+}
+
+@keyframes fadeRightTail700 {
+    0% {
+        right: -60px;
+        z-index: 2;
+    }
+
+    40% {
+        right: -60px;
+        z-index: 2;
+        opacity: 1;
+    }
+
+    80% {
+        right: -75px;
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1;
+        z-index: 0;
+        right: -70px;
+    }
+}
+
+@keyframes fadeRightTail1200 {
+    0% {
+        right: -60px;
+        z-index: 2;
+    }
+
+    40% {
+        right: -60px;
+        z-index: 2;
+        opacity: 1;
+    }
+
+    80% {
+        right: -95px;
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1;
+        z-index: 0;
+        right: -85px;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes ScrollfadeDown {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -20%, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes clipboardFlipY {
+    0% {
+        transform: rotateY(10deg) skewY(-10deg) scaleY(0.1);
+        opacity: 0.7;
+    }
+
+    30% {
+        transform: rotateY(0deg);
+    }
+
+    100% {
+        transform: rotateY(0deg) skewY(0deg) scaleY(1);
+        opacity: 1;
+    }
+}
+
+@keyframes ScrollfadeDownMobile {
+    0% {
+        opacity: 0;
+        margin-top: -200px;
+    }
+
+    100% {
+        opacity: 1;
+        margin-top: -180px;
+    }
+}
+
+@keyframes ScrollfadeDownMobileMax600 {
+    0% {
+        opacity: 0;
+        margin-top: 0px;
+    }
+
+    100% {
+        opacity: 1;
+        margin-top: 15px;
     }
 }

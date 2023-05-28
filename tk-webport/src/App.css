@@ -71,7 +71,7 @@ body {
   align-items: center; */
   background-color: #6C9BCF;
   position: relative;
-  z-index: -1;
+  z-index: 0;
 }
 
 
@@ -170,9 +170,23 @@ body {
 
 
 @media screen and (max-width: 430px) {
+  
+}
+
+@media screen and (max-width: 600px) {
+  #Skills {
+    z-index: -1;
+  }
   #Techin {
     padding: 0;
     padding-top: 40px;
+  }
+}
+
+@media screen and (width: 600px) {
+  #Techin {
+    padding: 0;
+    padding-top: 100px;
   }
 }
 

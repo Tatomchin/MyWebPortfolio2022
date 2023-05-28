@@ -8,11 +8,6 @@
     justify-content: flex-end;
     position: relative;
     z-index: 1;
-    /* padding-left: 120px; */
-    /* background-image: url(../picture/my-profile3.jpg); */
-    /* background-size: 110%; */
-    /* background-repeat: no-repeat; */
-    /* background-position: center; */
 }
 
 #myPicture {
@@ -209,16 +204,17 @@
     #myPicture {
         max-width: 150%;
         height: 280px;
+        margin-top: 25px;
     }
 
     #tape1 {
-        top: -10px;
-        left: -45px;
+        top: 20px;
+        left: -50px;
         transform: scale(1);
     }
 
     #tape2 {
-        bottom: 75px;
+        bottom: 90px;
         right: -45px;
         transform: scale(1);
     }

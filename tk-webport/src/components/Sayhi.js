@@ -1,8 +1,7 @@
 import styles from './Sayhi.module.css'
-import animate from 'animate.css';
+import 'animate.css';
 
 function Sayhi() {
-    console.log(animate);
     return (
         <div className={styles.SayhiBg}>
             <h1 className='animate__animated animate__tada animate__infinite animate__slower'>
