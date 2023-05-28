@@ -16,6 +16,17 @@ import tailLetter from '../picture/section1/TailLetter.png';
 import arrowFlip from '../picture/section1/flipArrow.png';
 import MyInfo from './myInfo';
 
+function switchRotate(key) {
+    switch (key) {
+        case true:
+            document.documentElement.style.setProperty('--flipRotate--', '180deg');
+            break;
+        case false:
+            document.documentElement.style.setProperty('--flipRotate--', '0deg');
+            break;
+        default:
+    }
+}
 
 function Techin() {
     const { st_scrollTagtop, windowDimension } = useContext(ConData);
@@ -43,23 +54,20 @@ function Techin() {
     }
     return (
         <div id={styles.TechinIn}>
-            {/* <img id={styles.imgGear1} src={imgGear1} alt="Gear1" />
-            <img id={styles.imgGear2} src={imgGear2} alt="Gear2" />
-            <img id={styles.imgGear3} src={imgGear3} alt="Gear3" /> */}
-            <div className={styles.flipBox}>
+            <div className={`${styles.flipBox}`}>
                 <img id={styles.imgHeadLetter} src={headLetter} alt="HeadLetter" />
                 <img id={styles.imgTailLetter} src={tailLetter} alt="TailLetter" />
-                <div className={styles.flipBoxInner}>
+                <div className={`${styles.flipBoxInner} ${styles.flipRotate}`}>
                     <div id={styles.clipboard} className={styles.flipBoxFront}>
                         <img id={styles.imgClipboard} src={clipboardAxis} alt="Clipboard" />
                         <PictureProfile />
                         <Sayhi />
-                        <div className={styles.arrowFlip}>
+                        <div className={styles.arrowFlip} onClick={()=>switchRotate(true)}>
                             <h4 id={styles.arrowFlipTextFont}>Personal Information !</h4>
                             <img id={styles.imgArrowFlipFont} src={arrowFlip} alt="Arrow Flip" />
                         </div>
                     </div>
-                    <div id={styles.clipboardBack} className={styles.flipBoxBack}>
+                    <div id={styles.clipboardBack} className={styles.flipBoxBack} onClick={()=>switchRotate(false)}>
                         <img id={styles.imgClipboardBack} src={clipboardBackAxis} alt="Clipboard_Back" />
                         <MyInfo />
                         <div className={styles.arrowFlip}>
@@ -69,7 +77,6 @@ function Techin() {
                     </div>
                 </div>
             </div>
-
             <div id={styles.ScrollDown} className={`${st_scrollTagtop ? '' : styles.ScrollDownFadeOut} `}>
                 <a href="#Skills"><span></span>Scroll Down</a>
             </div>

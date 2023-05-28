@@ -1,15 +1,8 @@
 .SayhiBg {
-    /* background-color: rgb(214, 213, 214); */
     opacity: 80%;
     font-weight: 800;
     z-index: 1;
 }
-
-.SayhiBg>h1 {
-    /* background-color: #19376D; */  
-}
-
-.SayhiBg>h2 {}
 
 .SayhiBg>p {
     text-align: justify;
@@ -17,20 +10,17 @@
 
 #myName {
     color: rgb(255, 255, 255);
-    
-    animation: blinkName 30s ease infinite;
-    
-
+    animation: blinkName 20s ease infinite;
     font-size: 0.8em;
+    background-color: #19376D;
+    border-radius: 20px;
+    padding: 2px;
+    padding-left: 10px;
+    padding-right: 17px;
 }
 
 #career {
     color: rgb(240, 77, 77);
-    /* background-color: white; */
-}
-
-#welcome {
-    /* background-color: #19376D; */
 }
 
 
@@ -49,6 +39,8 @@
         font-size: 1.2em;
         margin-top: auto;
         margin-bottom: auto;
+        display: inline-block;
+        margin-right: 0.4em;
     }
 
     .SayhiBg>h2 {
@@ -66,12 +58,15 @@
     #myName {
         margin-top: 0;
         margin-bottom: 0;
+        display: inline-block;
+        padding-right: 11px;
+        font-size: 1.1em;
     }
 
     #career {
         line-height: auto;
         margin-top: auto;
-        margin-bottom: auto;
+        margin-bottom: -0.3em;
     }
 
     #welcome {
@@ -104,16 +99,16 @@
     }
 
     .SayhiBg>h1 {
-        font-size: 1.3em;
+        font-size: 1.6em;
         margin-top: 0.1em;
-        margin-bottom: -0.2em;
+        margin-bottom: 0.1em;
         text-align: center;
         display: inline-block;
     }
 
     .SayhiBg>h2 {
         text-align: left;
-        font-size: 1.5em;
+        font-size: 1.3em;
     }
 
     .SayhiBg>p {
@@ -125,21 +120,22 @@
 
 
     #myName {
-        font-size: 1em;
+        font-size: 1.4em;
         display: inline;
         margin-left: 10px;
+        padding-right: 16px;
     }
 
     #career {
         line-height: 1.1;
         margin-top: 0em;
-        margin-bottom: 1.5em;
+        margin-bottom: 2em;
     }
 
     #welcome {
         font-size: 1.3em;
-        margin-top: -40px;
-        margin-bottom: -15px;
+        margin-top: -43px;
+        margin-bottom: -23px;
         line-height: 1.1;
     }
 }
@@ -152,11 +148,11 @@
     }
 
     .SayhiBg>h1 {
-        font-size: 1.3em;
+        font-size: 1.8em;
     }
 
     .SayhiBg>h2 {
-        font-size: 1.7em;
+        font-size: 1.5em;
     }
 
     .SayhiBg>p {
@@ -165,7 +161,7 @@
     }
 
     #myName {
-        font-size: 1em;
+        font-size: 1.5em;
     }
 
     #career {
@@ -173,6 +169,8 @@
     }
 
     #welcome {
+        margin-top: -2.1em;
+        margin-bottom: -0.8em;
         font-size: 1.4em;
     }
 }
@@ -185,7 +183,9 @@
     }
 
     .SayhiBg>h1 {
-        font-size: 2.2em;
+        font-size: 2.5em;
+        margin-left: -20px;
+        margin-right: 10px;
     }
 
     .SayhiBg>h2 {
@@ -195,7 +195,7 @@
     #myName {
         margin-top: 0;
         margin-bottom: 0;
-        font-size: 1.5em;
+        font-size: 2em;
     }
 
     .SayhiBg>p {
@@ -205,8 +205,8 @@
 
 @keyframes blinkName {
     0% {
-        color: rgb(0, 145, 255);
-        text-shadow: 0 0 10px rgb(255, 255, 255);
+        color: rgb(255, 255, 255);
+        text-shadow: 0 0 2px rgb(255, 255, 255);
     }
 
     5% {
@@ -215,8 +215,8 @@
     }
 
     30% {
-        color: rgb(255, 106, 0);
-        text-shadow: 0 0 10px rgb(255, 255, 255);
+        color: rgb(255, 255, 255);
+        text-shadow: 0 0 2px rgb(255, 255, 255);
     }
 
     35% {
@@ -225,17 +225,17 @@
     }
 
     60% {
-        color: rgb(255, 0, 170);
-        text-shadow: 0 0 10px rgb(255, 255, 255);
+        color: rgb(255, 255, 255);
+        text-shadow: 0 0 2px rgb(255, 255, 255);
     }
 
     65% {
         color: rgb(255, 255, 255);
         text-shadow: 0 0 10px rgb(255, 255, 255);
     }
-    100% {
-        color: rgb(0, 145, 255);
-        text-shadow: 0 0 10px rgb(255, 255, 255);
-    }
 
+    100% {
+        color: rgb(255, 255, 255);
+        text-shadow: 0 0 2px rgb(255, 255, 255);
+    }
 }

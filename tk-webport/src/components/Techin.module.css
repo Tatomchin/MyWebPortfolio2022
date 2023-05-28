@@ -1,3 +1,7 @@
+:root {
+    --flipRotate--: 0deg;
+}
+
 #TechinIn {
     display: flex;
     flex-wrap: wrap;
@@ -37,6 +41,11 @@
 .arrowFlip {
     z-index: 2;
     cursor: pointer;
+    opacity: 0.5;
+}
+
+.arrowFlip:hover{
+    opacity: 1;
 }
 
 #arrowFlipTextFont {
@@ -162,7 +171,7 @@
         height: 25px;
         right: 15px;
         bottom: 25px;
-        transform: rotate(-90deg);
+        transform: rotate(90deg) scaleX(-1);
     }
 
     #arrowFlipTextBack {
@@ -177,6 +186,14 @@
         right: 25px;
         bottom: 75px;
         transform: rotate(-90deg);
+    }
+
+    .arrowFlip:hover #imgArrowFlipFont {
+        animation: animFlipRotateFontMax600 1s ease-out infinite;
+    }
+
+    .arrowFlip:hover #imgArrowFlipBack {
+        animation: animFlipRotateBackMax600 1s ease-out infinite;
     }
 
     #clipboardBack {
@@ -210,8 +227,8 @@
         margin-top: 20px;
     }
 
-    .flipBox:hover .flipBoxInner {
-        transform: rotateY(180deg);
+    .flipRotate {
+        transform: rotateY(var(--flipRotate--));
     }
 
     .flipBoxFront,
@@ -282,6 +299,7 @@
     #imgArrowFlipFont {
         transform: rotate(0deg);
     }
+
     #imgArrowFlipBack {
         transform: rotate(0deg);
     }
@@ -332,6 +350,7 @@
         height: 30px;
         right: 5px;
         bottom: 10px;
+
     }
 
     #arrowFlipTextBack {
@@ -345,6 +364,15 @@
         height: 30px;
         right: 45px;
         bottom: 10px;
+        transform: rotateX(-180deg);
+    }
+
+    .arrowFlip:hover #imgArrowFlipFont {
+        animation: animFlipRotateFont 1s ease-out infinite;
+    }
+
+    .arrowFlip:hover #imgArrowFlipBack {
+        animation: animFlipRotateBack 1s ease-out infinite;
     }
 
     #imgHeadLetter {
@@ -379,8 +407,9 @@
         transform-style: preserve-3d;
     }
 
-    .flipBox:hover .flipBoxInner {
-        transform: rotateX(180deg);
+    /*600*/
+    .flipRotate {
+        transform: rotateX(var(--flipRotate--));
     }
 
     .flipBoxFront,
@@ -817,5 +846,61 @@
     100% {
         opacity: 1;
         margin-top: 15px;
+    }
+}
+
+@keyframes animFlipRotateFontMax600 {
+    0% {
+        transform:  rotate(90deg) scaleX(-1);
+    }
+
+    50% {
+        transform:  rotate(110deg) scaleX(-1);
+    }
+
+    100% {
+        transform:  rotate(90deg) scaleX(-1);
+    }
+}
+@keyframes animFlipRotateBackMax600 {
+    0% {
+       transform: rotate(-90deg);
+    }
+
+    50% {
+        transform: rotate(-110deg);
+    }
+
+    100% {
+       transform: rotate(-90deg);
+    }
+}
+
+@keyframes animFlipRotateFont {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(-20deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes animFlipRotateBack {
+    0% {
+        transform: rotate(0deg)  rotateX(-180deg);
+    }
+
+    50% {
+        
+        transform: rotate(20deg)  rotateX(-180deg);
+    }
+
+    100% {
+        transform: rotate(0deg)  rotateX(-180deg);
     }
 }

@@ -15,7 +15,6 @@ function Skills() {
     }
     return (
         <div className={`${styles.SkillBg} ${animSkillBg}`} ref={skillBG}>
-            {/* <img id={styles.bgPaper} className={``} src={paper} alt="Paper" ref={skillImg}/> */}
             <div className={styles.HeadSkill}><h2>MY SKILLS</h2></div>
             <WebDevSkills TagObserve={skillBGisVisible}/>
             <GameDevSkills TagObserve={skillBGisVisible}/>
