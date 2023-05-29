@@ -63,8 +63,8 @@ function ShowContentGamePJ({ showFullSizeImg, showFullSizeImgCer, contentNumber,
                     <img className={`${styles.imgPjEx} ${hideImgPjEx}`} src={picduckHunt2} onClick={() => showFullSizeImg(picduckHunt2)} alt="DuckHunt 2" />
                     <img className={`${styles.imgPjEx} ${hideImgPjEx}`} src={picduckHunt3} onClick={() => showFullSizeImg(picduckHunt3)} alt="DuckHunt 3" />
                 </div>
-                <div>
-                    <a className={`${styles.pjText} ${hideText}`} href="https://duckhunt-js-tk.netlify.app/">Click to play!</a>
+                <div className={styles.btnTry}>
+                    <a className={`${styles.pjText} ${hideText}`} href="https://duckhunt-js-tk.netlify.app/">Click try to play!</a>
                 </div>
             </div>
         ), (
@@ -81,8 +81,8 @@ function ShowContentGamePJ({ showFullSizeImg, showFullSizeImgCer, contentNumber,
                     <img className={`${styles.imgPjEx} ${hideImgPjEx}`} src={picdeadLineSpace2} onClick={() => showFullSizeImg(picdeadLineSpace2)} alt="DeadLineSpace 2" />
                     <img className={`${styles.imgPjEx} ${hideImgPjEx}`} src={picdeadLineSpace3} onClick={() => showFullSizeImg(picdeadLineSpace3)} alt="DeadLineSpace 3" />
                 </div>
-                <div>
-                    <a className={`${styles.pjText} ${hideText}`} href="https://dead-line-space-firstpj.netlify.app/">Click to play!</a>
+                <div className={styles.btnTry}>
+                    <a className={`${styles.pjText} ${hideText}`} href="https://dead-line-space-firstpj.netlify.app/">Click try to play!</a>
                 </div>
             </div>
         )

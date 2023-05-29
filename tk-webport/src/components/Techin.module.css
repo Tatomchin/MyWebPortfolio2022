@@ -145,12 +145,12 @@
         background-color: #6C9BCF;
         position: relative;
         width: 100%;
+        animation: fadeIn 0.5s ease;
     }
 
     #clipboard {
         width: 100%;
         height: 100%;
-        /* animation: clipboardFlipY 2s ease-out; */
     }
 
     #imgClipboard {
@@ -215,6 +215,7 @@
         width: auto;
         height: auto;
         perspective: 1000px;
+        animation: fadeIn 1s ease;
     }
 
     .flipBoxInner {

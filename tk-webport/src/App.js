@@ -116,20 +116,12 @@ function App() {
             <img id="imgGearScrollTop" src={imgGear3} alt="GearScrollTop" />
           </a>
         </div>
-
-        {/* 
-            <img id={styles.imgGear2} src={imgGear2} alt="Gear2" />
-            <img id={styles.imgGear3} src={imgGear3} alt="Gear3" /> */}
         <div className="Content" ref={contentTag}>
-          {/* <img id="imgGear1" src={imgGear1} alt="Gear1" />
-          <img id="imgGear2" src={imgGear2} alt="Gear2" />
-          <img id="imgGear3" src={imgGear3} alt="Gear3" /> */}
           <section id="Techin" ref={techinTag}><Techin /></section>
           <section id="Skills" ref={skillTag}>
             <img id={'imgGearSkill_L1'} className={'imgGear'} src={imgGear1} alt="GearSkill1" />
             <img id={'imgGearSkill_L2'} className={'imgGear'} src={imgGear2} alt="GearSkill2" />
             <img id={'imgGearSkill_L3'} className={'imgGear'} src={imgGear3} alt="GearSkill3" />
-  
             <img id={'imgGearSkill_R1'} className={'imgGear'} src={imgGear2} alt="GearSkill4" />
             <img id={'imgGearSkill_R2'} className={'imgGear'} src={imgGear3} alt="GearSkill5" />
             <Skills />

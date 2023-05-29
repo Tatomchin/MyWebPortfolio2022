@@ -4,9 +4,6 @@ import styles from './Techin.module.css'
 import { useContext, useState } from 'react';
 import { ConData } from '../App.js'
 
-// import imgGear1 from '../picture/section1/gear1.png';
-// import imgGear2 from '../picture/section1/gear2.png';
-// import imgGear3 from '../picture/section1/gear3.png';
 import clipboardH from '../picture/section1/clipboardH.png';
 import clipboardV from '../picture/section1/clipboardV.png';
 import clipboardH_Back from '../picture/section1/clipboardH_Back.png';

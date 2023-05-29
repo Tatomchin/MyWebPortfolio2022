@@ -7,7 +7,6 @@ import { ConData } from '../../App.js'
 
 function Navbar() {
     const { windowDimension } = useContext(ConData);
-
     const [BTNMenu, setBTNMenu] = useState(<NavBTN />);
     const [hideBoxMenu, setHideBoxMenu] = useState(null);
 

@@ -63,6 +63,13 @@
     text-align: justify;
     text-indent: 40px;
 }
+.btnTry{
+    margin-top: 5px;
+}
+
+.btnTry:hover{
+    text-shadow: 0 0 5px rgb(58, 153, 254);
+}
 
 .hideContent {
     animation: fadeUpHide 1s ease;
@@ -134,7 +141,7 @@
         animation: fadeUpImage 1s ease;
     }
     .pjContent {
-        height: 600px;
+        height: 640px;
         width: auto;
         animation: fadeDown 1s ease;
     }
@@ -150,7 +157,7 @@
     }
 
     100% {
-        height: 600px;
+        height: 640px;
     }
 }
 

@@ -11,7 +11,6 @@ let animListProejct = null;
 function ListGamePJ({ TagObserve }) {
     const [projectUL, projectULIsVisible] = useInView();
     if (TagObserve === true && projectULIsVisible === true && animListProejct === null) {
-
         animListProejct = styles.AnimListSkill;
     }
 

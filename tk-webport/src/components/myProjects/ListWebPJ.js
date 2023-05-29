@@ -11,7 +11,6 @@ let animListProejct = null;
 function ListWebPJ({TagObserve}) {
     const [projectUL, projectULIsVisible] = useInView();
     if (TagObserve === true && projectULIsVisible === true && animListProejct === null) {
-        
         animListProejct = styles.AnimListSkill;
     }
 
@@ -96,7 +95,7 @@ function ListWebPJ({TagObserve}) {
                 </li>
                 <li className={stylesBG.listProject}>
                     <h4>
-                        <a href="https://console-travel-rocketpj.netlify.app/#home">Sep 2020 Consoles's Travel</a>
+                        <a href="https://console-travel-rocketpj.netlify.app/">Sep 2020 Consoles's Travel</a>
                         <a href="https://github.com/Tatomchin/RockProject-MP2020"><img className={styles.gitHubImg} src={picGithub} alt="GitHub Logo" /></a>
                         <br/><button className={`${stylesBG.btnShowPJ} ${!!showContentPJ2 ? stylesBG.activeBTN : stylesBG.noActiveBTN}`} onClick={() => { onClickShow(1) }}>{btnShow2}</button>
                     </h4>
