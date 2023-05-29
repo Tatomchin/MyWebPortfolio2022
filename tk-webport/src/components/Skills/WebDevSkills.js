@@ -1,9 +1,9 @@
 import styles from './ListSkills.module.css'
-import htmlPic from '../../picture/skillLogos/html.png'
-import cssPic from '../../picture/skillLogos/css.png'
-import jsPic from '../../picture/skillLogos/js.png'
-import reactPic from '../../picture/skillLogos/react.png'
-import nodeJsPic from '../../picture/skillLogos/nodeJS.png'
+import htmlPic from '../../picture/section2/skillLogos/html.png'
+import cssPic from '../../picture/section2/skillLogos/css.png'
+import jsPic from '../../picture/section2/skillLogos/js.png'
+import reactPic from '../../picture/section2/skillLogos/react.png'
+import nodeJsPic from '../../picture/section2/skillLogos/nodeJS.png'
 
 import { useInView } from 'react-intersection-observer';
 

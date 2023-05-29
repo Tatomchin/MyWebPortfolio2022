@@ -1,16 +1,16 @@
 import styles from './ListWebPJ.module.css';
 
-import picAsean1 from '../../picture/exProjects/web/asean/1.png';
-import picAsean2 from '../../picture/exProjects/web/asean/2.png';
-import picAsean3 from '../../picture/exProjects/web/asean/3.png';
+import picAsean1 from '../../picture/section3/exProjects/web/asean/1.png';
+import picAsean2 from '../../picture/section3/exProjects/web/asean/2.png';
+import picAsean3 from '../../picture/section3/exProjects/web/asean/3.png';
 
-import picConsole1 from '../../picture/exProjects/web/rocket/1.png';
-import picConsole2 from '../../picture/exProjects/web/rocket/2.png';
-import picConsole3 from '../../picture/exProjects/web/rocket/3.png';
+import picConsole1 from '../../picture/section3/exProjects/web/rocket/1.png';
+import picConsole2 from '../../picture/section3/exProjects/web/rocket/2.png';
+import picConsole3 from '../../picture/section3/exProjects/web/rocket/3.png';
 
-import picCleanfield1 from '../../picture/exProjects/web/cleanfield/1.png';
-import picCleanfield2 from '../../picture/exProjects/web/cleanfield/2.png';
-import picCleanfield3 from '../../picture/exProjects/web/cleanfield/3.png';
+import picCleanfield1 from '../../picture/section3/exProjects/web/cleanfield/1.png';
+import picCleanfield2 from '../../picture/section3/exProjects/web/cleanfield/2.png';
+import picCleanfield3 from '../../picture/section3/exProjects/web/cleanfield/3.png';
 
 function ShowContentWebPJ({ showFullSizeImg, contentNumber, hideContent, hideText, hideImgPjEx }) {
     const contentPJ = [(

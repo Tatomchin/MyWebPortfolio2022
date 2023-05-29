@@ -1,11 +1,11 @@
 import styles from './PictureProfile.module.css'
-import myPicture from '../picture/my-profile3.jpg'
+import myPicture from '../picture/section1/my-profile.jpg'
 import imgTape from '../picture/section1/Tape.png'
 
-import picLine from '../picture/logo/line.png'
-import picFB from '../picture/logo/fb.png'
-import picGithub from '../picture/logo/github.png'
-import picLinkedin from '../picture/logo/linkedin.png'
+import picLine from '../picture/assets/logo/line.png'
+import picFB from '../picture/assets/logo/fb.png'
+import picGithub from '../picture/assets/logo/github.png'
+import picLinkedin from '../picture/assets/logo/linkedin.png'
 
 function PictureProfile() {
     return (

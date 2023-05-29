@@ -4,13 +4,13 @@ import cerECTICON from '../../picture/section3/certificate/ECTI-CON.png';
 import cerNSC1 from '../../picture/section3/certificate/NSC1.jpg';
 import cerNSC2 from '../../picture/section3/certificate/NSC2.jpg';
 
-import picduckHunt1 from '../../picture/exProjects/game/duckhunt/1.png';
-import picduckHunt2 from '../../picture/exProjects/game/duckhunt/2.png';
-import picduckHunt3 from '../../picture/exProjects/game/duckhunt/3.png';
+import picduckHunt1 from '../../picture/section3/exProjects/game/duckhunt/1.png';
+import picduckHunt2 from '../../picture/section3/exProjects/game/duckhunt/2.png';
+import picduckHunt3 from '../../picture/section3/exProjects/game/duckhunt/3.png';
 
-import picdeadLineSpace1 from '../../picture/exProjects/game/dead-line-space/1.png';
-import picdeadLineSpace2 from '../../picture/exProjects/game/dead-line-space/2.png';
-import picdeadLineSpace3 from '../../picture/exProjects/game/dead-line-space/3.png';
+import picdeadLineSpace1 from '../../picture/section3/exProjects/game/dead-line-space/1.png';
+import picdeadLineSpace2 from '../../picture/section3/exProjects/game/dead-line-space/2.png';
+import picdeadLineSpace3 from '../../picture/section3/exProjects/game/dead-line-space/3.png';
 
 function ShowContentGamePJ({ showFullSizeImg, showFullSizeImgCer, contentNumber, hideContent, hideText, hideImgPjEx }) {
     const contentPJ = [

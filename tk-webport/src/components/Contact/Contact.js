@@ -1,12 +1,11 @@
 import styles from './Contact.module.css'
 import stylesForm from './ContactForm.module.css'
-import picEmail from '../../picture/logo/mail.png'
-import picLine from '../../picture/logo/line.png'
-import picPhone from '../../picture/logo/tel.png'
-import picFB from '../../picture/logo/fb.png'
-import picGithub from '../../picture/logo/github.png'
-import picLinkedin from '../../picture/logo/linkedin.png'
-
+import picEmail from '../../picture/assets/logo/mail.png'
+import picLine from '../../picture/assets/logo/line.png'
+import picPhone from '../../picture/assets/logo/tel.png'
+import picFB from '../../picture/assets/logo/fb.png'
+import picGithub from '../../picture/assets/logo/github.png'
+import picLinkedin from '../../picture/assets/logo/linkedin.png'
 import picStamp from '../../picture/section4/stamp.png'
 
 import ContactForm from './ContactForm';

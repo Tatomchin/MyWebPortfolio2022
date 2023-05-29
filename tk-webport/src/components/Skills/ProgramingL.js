@@ -1,7 +1,7 @@
 import styles from './ListSkills.module.css'
-import pythonPic from  '../../picture/skillLogos/python.png'
-import cPic from  '../../picture/skillLogos/c.png'
-import dbSQLPic from  '../../picture/skillLogos/db.png'
+import pythonPic from  '../../picture/section2/skillLogos/python.png'
+import cPic from  '../../picture/section2/skillLogos/c.png'
+import dbSQLPic from  '../../picture/section2/skillLogos/db.png'
 
 import { useInView } from 'react-intersection-observer';
 

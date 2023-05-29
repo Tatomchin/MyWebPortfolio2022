@@ -1,7 +1,7 @@
 import styles from './MyInfo.module.css'
 import 'animate.css';
 
-import myPictureInfo from '../picture/my-profile4.jpg'
+import myPictureInfo from '../picture/section1/my-profileInfo.jpg'
 import imgTape from '../picture/section1/Tape.png'
 
 function MyInfo() {

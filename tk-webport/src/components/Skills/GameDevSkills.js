@@ -1,7 +1,7 @@
 import styles from './ListSkills.module.css'
-import unrealPic from  '../../picture/skillLogos/ue.png'
-import mayalPic from  '../../picture/skillLogos/maya.png'
-import zbrushPic from  '../../picture/skillLogos/zbrush.png'
+import unrealPic from  '../../picture/section2/skillLogos/ue.png'
+import mayalPic from  '../../picture/section2/skillLogos/maya.png'
+import zbrushPic from  '../../picture/section2/skillLogos/zbrush.png'
 
 import { useInView } from 'react-intersection-observer';
 
