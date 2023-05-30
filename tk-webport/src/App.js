@@ -2,7 +2,7 @@ import './App.css';
 import Techin from './components/Techin';
 import Skills from './components/Skills/Skills';
 import Contact from './components/Contact/Contact';
-import MyProjects from './components/MyProjects/MyProjects';
+import MyProjects from './components/myProjects/MyProjects';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 
