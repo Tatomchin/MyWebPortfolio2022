@@ -44,7 +44,7 @@
     opacity: 0.5;
 }
 
-.arrowFlip:hover{
+.arrowFlip:hover {
     opacity: 1;
 }
 
@@ -90,50 +90,33 @@
     z-index: 0;
 }
 
-#ScrollDown {
-    display: flex;
-    flex-direction: column;
+#SlideDown {
+    width: 100%;
+    height: auto;
     position: relative;
     align-items: center;
+    text-align: center;
+    margin-top: 90px;
+    animation: fadeIn 0.5s ease;
 }
 
-#ScrollDown>a {
+#SlideDown>#imgSlideDown {
     position: relative;
-    padding-top: 70px;
-    color: #fff;
-    font-size: 1.125rem;
-    letter-spacing: 2px;
-    text-decoration: none;
-    margin-bottom: -50px;
-}
-
-#ScrollDown>a span {
-    position: absolute;
-    top: 0;
-    right: calc(50% - 15px);
-    bottom: 50px;
-    left: calc(50% - 15px);
+    margin: 0 auto;
     width: 30px;
-    border: 2px solid #fff;
-    border-radius: 16px;
+    height: auto;
+    animation: animSlideDown 1s ease infinite;
+    opacity: 0.7;
 }
 
-#ScrollDown>a span::before {
-    opacity: 0;
-    position: absolute;
-    top: 8px;
-    right: calc(50% - 3px);
-    left: calc(50% - 3px);
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background-color: rgb(202, 120, 120);
-    content: '';
-    animation: down 1.5s linear infinite;
+#imgSlideDown>a>img {
+    width: 100%;
+    height: auto;
 }
 
-#ScrollDown>a {
-    font-size: 1em;
+#SlideDown>a {
+    width: 100%;
+    height: auto;
 }
 
 @media screen and (max-width: 600px) {
@@ -260,25 +243,26 @@
         height: 0;
     }
 
-    #ScrollDown {
-        width: 100%;
-        height: auto;
-        padding: 0;
-        margin-bottom: auto;
-        margin-top: 15px;
-        animation: ScrollfadeDownMobileMax600 1s ease;
+    #SlideDown>#imgSlideDown{
+        width: 20px;
     }
 
+    #SlideDown {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .flipBoxInner {
+        width: 270px;
+        height: 480px;
+    }
 }
 
 @media screen and (min-width: 400px) {
     .flipBoxInner {
         width: 350px;
         height: 520px;
-    }
-
-    #ScrollDown {
-        margin-top: 20px;
     }
 
     #arrowFlipTextBack {
@@ -429,14 +413,6 @@
     .flipBoxBack {
         color: white;
         transform: rotateX(180deg);
-    }
-
-    #ScrollDown {
-        height: 100px;
-        width: 100%;
-        padding: 20px;
-        margin-top: 50px;
-        animation: ScrollfadeDown 1.5s ease;
     }
 
 }
@@ -798,18 +774,6 @@
     }
 }
 
-@keyframes ScrollfadeDown {
-    from {
-        opacity: 0;
-        transform: translate3d(0, -20%, 0);
-    }
-
-    to {
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
-    }
-}
-
 @keyframes clipboardFlipY {
     0% {
         transform: rotateY(10deg) skewY(-10deg) scaleY(0.1);
@@ -826,46 +790,23 @@
     }
 }
 
-@keyframes ScrollfadeDownMobile {
-    0% {
-        opacity: 0;
-        margin-top: -200px;
-    }
-
-    100% {
-        opacity: 1;
-        margin-top: -180px;
-    }
-}
-
-@keyframes ScrollfadeDownMobileMax600 {
-    0% {
-        opacity: 0;
-        margin-top: 0px;
-    }
-
-    100% {
-        opacity: 1;
-        margin-top: 15px;
-    }
-}
-
 @keyframes animFlipRotateFontMax600 {
     0% {
-        transform:  rotate(90deg) scaleX(-1);
+        transform: rotate(90deg) scaleX(-1);
     }
 
     50% {
-        transform:  rotate(110deg) scaleX(-1);
+        transform: rotate(110deg) scaleX(-1);
     }
 
     100% {
-        transform:  rotate(90deg) scaleX(-1);
+        transform: rotate(90deg) scaleX(-1);
     }
 }
+
 @keyframes animFlipRotateBackMax600 {
     0% {
-       transform: rotate(-90deg);
+        transform: rotate(-90deg);
     }
 
     50% {
@@ -873,7 +814,7 @@
     }
 
     100% {
-       transform: rotate(-90deg);
+        transform: rotate(-90deg);
     }
 }
 
@@ -893,15 +834,30 @@
 
 @keyframes animFlipRotateBack {
     0% {
-        transform: rotate(0deg)  rotateX(-180deg);
+        transform: rotate(0deg) rotateX(-180deg);
     }
 
     50% {
-        
-        transform: rotate(20deg)  rotateX(-180deg);
+
+        transform: rotate(20deg) rotateX(-180deg);
     }
 
     100% {
-        transform: rotate(0deg)  rotateX(-180deg);
+        transform: rotate(0deg) rotateX(-180deg);
+    }
+}
+
+@keyframes animSlideDown {
+    0% {
+       top: 0;
+    }
+
+    50% {
+
+        top: 5px;
+    }
+
+    100% {
+        top: 0;
     }
 }

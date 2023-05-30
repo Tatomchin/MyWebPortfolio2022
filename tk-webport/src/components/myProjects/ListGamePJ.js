@@ -130,7 +130,7 @@ function ListGamePJ({ TagObserve }) {
                 </li>
                 <li className={stylesBG.listProject}>
                     <h4>
-                        <a href="https://duckhunt-js-tk.netlify.app/"> Sep 2020 DuckHunt for Consoles's Travel Web (JS)</a>
+                        <a href="https://duckhunt-js-tk.netlify.app/"> Sep 2020 DuckHunt (JS)</a>
                         <a href="https://github.com/Tatomchin/DuckHuntJS"><img className={styles.gitHubImg} src={picGithub} alt="GitHub Logo" /></a>
                         <br /><button className={`${stylesBG.btnShowPJ} ${!!showContentPJ3 ? stylesBG.activeBTN : stylesBG.noActiveBTN}`} onClick={() => { onClickShow(2) }}>{btnShow3}</button>
                     </h4>

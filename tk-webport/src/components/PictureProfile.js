@@ -15,8 +15,8 @@ function PictureProfile() {
             <img id={styles.myPicture} src={myPicture} alt="My Profile." />
             <ul className={`${styles.listIcon}`}>
                 <li><a href="https://www.facebook.com/tomkung.kowprasert/"><img class={styles.listProfileimgLogo} src={picFB} alt='Facebook' /></a></li>
-                <li><a href="https://line.me/ti/p/Kz7ELZgIw8?fbclid=IwAR2P8Q7GJX3aHni3DOZsIfhHH-H0dHkwkMupSArjItcOruqg8FKQCrroeHI"><img class={styles.listProfileimgLogo} src={picLine} alt='Line' /></a></li>
                 <li><a href="https://www.linkedin.com/in/techin-kowprasert-9a3a08263"><img class={styles.listProfileimgLogo} src={picLinkedin} alt='Linkedin' /></a></li>
+                <li><a href="https://line.me/ti/p/Kz7ELZgIw8?fbclid=IwAR2P8Q7GJX3aHni3DOZsIfhHH-H0dHkwkMupSArjItcOruqg8FKQCrroeHI"><img class={styles.listProfileimgLogo} src={picLine} alt='Line' /></a></li>
                 <li><a href="https://github.com/Tatomchin"><img class={styles.listProfileimgLogo} src={picGithub} alt='Github' /></a></li>
             </ul>
         </div>

@@ -80,6 +80,12 @@
     }
 }
 
+@media screen and (max-width: 300px) {
+    .SayhiBg {
+        width: 225px;
+    }
+}
+
 @media screen and (min-width: 400px) {
     .SayhiBg {
         margin-top: -60px;

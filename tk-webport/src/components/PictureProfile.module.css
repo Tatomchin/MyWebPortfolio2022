@@ -34,21 +34,32 @@
 .listIcon {
     list-style: none;
     padding: 0;
-    padding-left: 0;
-    margin-top: 20px;
+    margin: 0;
+}
+
+.listIcon>li {
+    width: 30px;
+    height: 30px;
 }
 
 .listIcon>li>a {
-    padding-top: 0px;
+    width: 100%;
+    height: 100%;
+    padding: 0;
 }
 
 .listProfileimgLogo {
-    width: 20px;
-    margin-left: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
 }
 
 .listProfileimgLogo:hover {
     filter: drop-shadow(0 0 10px #858585);
+    opacity: 1;
 }
 
 @media screen and (max-width: 600px) {
@@ -76,9 +87,19 @@
     }
 
     .listIcon {
-        list-style: none;
         display: block;
-        margin-top: 30px;
+        margin-top: -10px;
+    }
+
+    .listIcon>li {
+        width: 25px;
+        height: 25px;
+        margin-top: 12px;
+        margin-left: 13px;
+    }
+
+    .listProfileimgLogo {
+        width: 25px;
     }
 
     .listIcon li {
@@ -138,11 +159,15 @@
     }
 
     .listIcon {
-        list-style: none;
-        display: flex;
-        padding: 0;
-        padding-left: 0;
-        margin-top: -50px;
+        margin-top: -60px;
+        margin-left: -5px;
+    }
+
+    .listIcon>li {
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        margin-left: 5px;
     }
 
     .listIcon li {
@@ -181,7 +206,7 @@
     #tape1 {
         width: 100px;
         height: 100px;
-        top: -25px;
+        top: -10px;
         left: -20px;
         transform: scaleX(0.75);
     }
@@ -189,13 +214,21 @@
     #tape2 {
         width: 100px;
         height: 100px;
-        bottom: 40px;
-        right: -25px;
+        bottom: 55px;
+        right: -20px;
         transform: scaleX(0.75);
     }
 
     .listIcon {
-        margin-top: 0px;
+        margin-top: -40px;
+        margin-left: -5px;
+    }
+
+    .listIcon>li {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        margin-left: 10px;
     }
 }
 
@@ -218,13 +251,16 @@
         transform: scale(1);
     }
 
-    .listProfileimgLogo {
-        width: 30px;
-        margin-left: 15px;
+    .listIcon {
+        margin-top: -55px;
+        margin-left: -10px;
     }
 
-    .listIcon {
-        margin-left: -15px;
+    .listIcon>li {
+        display: inline-block;
+        width: 33px;
+        height: 33px;
+        margin-left: 13px;
     }
 }
 

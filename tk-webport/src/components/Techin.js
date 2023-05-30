@@ -11,6 +11,7 @@ import clipboardV_Back from '../picture/section1/clipboardV_Back.png';
 import headLetter from '../picture/section1/HeadLetter.png';
 import tailLetter from '../picture/section1/TailLetter.png';
 import arrowFlip from '../picture/section1/flipArrow.png';
+import doubleArrow from '../picture/section1/doubleArrow.png';
 import MyInfo from './myInfo';
 
 function switchRotate(key) {
@@ -59,12 +60,12 @@ function Techin() {
                         <img id={styles.imgClipboard} src={clipboardAxis} alt="Clipboard" />
                         <PictureProfile />
                         <Sayhi />
-                        <div className={styles.arrowFlip} onClick={()=>switchRotate(true)}>
+                        <div className={styles.arrowFlip} onClick={() => switchRotate(true)}>
                             <h4 id={styles.arrowFlipTextFont}>Personal Information !</h4>
                             <img id={styles.imgArrowFlipFont} src={arrowFlip} alt="Arrow Flip" />
                         </div>
                     </div>
-                    <div id={styles.clipboardBack} className={styles.flipBoxBack} onClick={()=>switchRotate(false)}>
+                    <div id={styles.clipboardBack} className={styles.flipBoxBack} onClick={() => switchRotate(false)}>
                         <img id={styles.imgClipboardBack} src={clipboardBackAxis} alt="Clipboard_Back" />
                         <MyInfo />
                         <div className={styles.arrowFlip}>
@@ -74,8 +75,8 @@ function Techin() {
                     </div>
                 </div>
             </div>
-            <div id={styles.ScrollDown} className={`${st_scrollTagtop ? '' : styles.ScrollDownFadeOut} `}>
-                <a href="#Skills"><span></span>Scroll Down</a>
+            <div id={styles.SlideDown} className={`${st_scrollTagtop ? '' : styles.ScrollDownFadeOut} `}>
+                <div id={styles.imgSlideDown}> <a href="#Skills"><img src={doubleArrow} alt="Slide Down Img" /></a></div>
             </div>
         </div>
     )

@@ -103,11 +103,12 @@
 
 @media screen and (max-width: 600px) {
     .MyProjectsBg {
-        width: 200px;
+        width: 300px;
         height: auto;
-        padding: 40px;
-        padding-top: 0px;
-        padding-bottom: 7px;
+        padding: 40px 30px;
+        margin: 0 10px;
+        padding-top: 30px;
+        padding-bottom: 30px;
     }
 
     .contentMyProject>h3{
@@ -128,14 +129,6 @@
 }
 
 @media screen and (min-width: 375px) {
-    .MyProjectsBg {
-        width: 250px;
-        height: auto;
-        padding: 50px;
-        padding-top: 0px;
-        padding-bottom: 7px;
-    }
-
     .listProject>h4 {
         font-size: 0.7em;
     }
@@ -154,8 +147,8 @@
         width: 480px;
         height: auto;
         padding: 40px;
-        padding-top: 0px;
-        padding-bottom: 7px;
+        padding-top: 20px;
+        padding-bottom: 30px;
     }
 
     .listProject>h4 {
