@@ -101,7 +101,7 @@
 .hideMenu{
     background-color: ghostwhite;
     position: absolute;
-    top: var(--HeightNavHideMenu--);
+    top: 44px;
     right: -100%;
     width: 80%;
     height: 100vh;
@@ -111,7 +111,20 @@
 
 .showHiddenMenu{
     right: 0;
-  }
+ }
+
+.bgCloseHiddeMenu{
+  width: 0;
+  height: 100vh;
+  position: absolute;
+  top: var(--HeightNavHideMenu--);
+  right: 0;
+  z-index: -1;
+}
+
+.showbgCloseHiddeMenu{
+  width: 100%;
+}
 
 .hideMenu li, a{
   list-style-type: none;
