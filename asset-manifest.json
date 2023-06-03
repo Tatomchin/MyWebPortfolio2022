@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/tk-portfolio/static/css/main.8de9a9f5.css",
-    "main.js": "/tk-portfolio/static/js/main.573124d3.js",
+    "main.css": "/tk-portfolio/static/css/main.651f82a1.css",
+    "main.js": "/tk-portfolio/static/js/main.0a643ca8.js",
     "static/js/787.6dd2fa38.chunk.js": "/tk-portfolio/static/js/787.6dd2fa38.chunk.js",
     "static/media/1.png": "/tk-portfolio/static/media/1.03329bdd705ab55e1d1d.png",
     "static/media/3.png": "/tk-portfolio/static/media/3.bf4f87e23d7ddbd42674.png",
@@ -25,6 +25,7 @@
     "static/media/ue.png": "/tk-portfolio/static/media/ue.80def5e892ece426f509.png",
     "static/media/html.png": "/tk-portfolio/static/media/html.29f2a198fe12c2e44b38.png",
     "static/media/Tape.png": "/tk-portfolio/static/media/Tape.732a776430a1b6d58f19.png",
+    "static/media/pdf.png": "/tk-portfolio/static/media/pdf.1a353b63000e37ea5812.png",
     "static/media/css.png": "/tk-portfolio/static/media/css.f536d06d28c938681767.png",
     "static/media/tel.png": "/tk-portfolio/static/media/tel.7a77e5035820df4414d3.png",
     "static/media/gear3.png": "/tk-portfolio/static/media/gear3.7767a1dc8b37aed68ee3.png",
@@ -35,12 +36,12 @@
     "static/media/mail.png": "/tk-portfolio/static/media/mail.2990f69772ef397cba3a.png",
     "static/media/clipboardV.png": "/tk-portfolio/static/media/clipboardV.3e5b05c8a0fa78bd6ca1.png",
     "index.html": "/tk-portfolio/index.html",
-    "main.8de9a9f5.css.map": "/tk-portfolio/static/css/main.8de9a9f5.css.map",
-    "main.573124d3.js.map": "/tk-portfolio/static/js/main.573124d3.js.map",
+    "main.651f82a1.css.map": "/tk-portfolio/static/css/main.651f82a1.css.map",
+    "main.0a643ca8.js.map": "/tk-portfolio/static/js/main.0a643ca8.js.map",
     "787.6dd2fa38.chunk.js.map": "/tk-portfolio/static/js/787.6dd2fa38.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8de9a9f5.css",
-    "static/js/main.573124d3.js"
+    "static/css/main.651f82a1.css",
+    "static/js/main.0a643ca8.js"
   ]
 }
