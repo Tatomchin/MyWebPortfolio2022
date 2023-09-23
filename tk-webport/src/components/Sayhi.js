@@ -36,7 +36,7 @@ function Sayhi() {
                 Hello I'm
             </h1>
             <h2 id={styles.myName} > Techin </h2>
-            <h2 id={styles.career}>Front-End, Back-End & Game-Dev</h2>
+            <h2 id={styles.career}>Front-End, Back-End and Game-Dev</h2>
             <h2 id={styles.welcome}>Welcome to my portfolio</h2>
             {textMax600}
             {textMin600}
