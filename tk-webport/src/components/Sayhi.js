@@ -14,12 +14,12 @@ function Sayhi() {
                 Just take a look at my skills below and consider me.
                 I hope to work with you.
                 My example skills about this web-dev,
-                font-end, and game-dev Thank you for your attention.
+                front-end, back-end, and game-dev Thank you for your attention.
             </p>
         );
         setTextMin600(null);
     }
-    else if(windowDimension.winWidth >= 600  &&  textMin600 === null) {
+    else if (windowDimension.winWidth >= 600 && textMin600 === null) {
         setTextMax600(null);
         setTextMin600(
             <p>
@@ -27,7 +27,7 @@ function Sayhi() {
                 Just take a look at my skills below and consider me.
                 I hope to work with you.<br />
                 My example skills about this web-dev,<br />
-                font-end, and game-dev Thank you for your attention.
+                front-end, back-end, and game-dev Thank you for your attention.
             </p>);
     }
     return (
@@ -36,7 +36,7 @@ function Sayhi() {
                 Hello I'm
             </h1>
             <h2 id={styles.myName} > Techin </h2>
-            <h2 id={styles.career}>Font-End & Game-Dev</h2>
+            <h2 id={styles.career}>Front-End, Back-End & Game-Dev</h2>
             <h2 id={styles.welcome}>Welcome to my portfolio</h2>
             {textMax600}
             {textMin600}

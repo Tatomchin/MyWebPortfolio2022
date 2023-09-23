@@ -6,6 +6,7 @@ import picPhone from '../../picture/assets/logo/tel.png'
 import picFB from '../../picture/assets/logo/fb.png'
 import picGithub from '../../picture/assets/logo/github.png'
 import picLinkedin from '../../picture/assets/logo/linkedin.png'
+import picPDF from '../../picture/assets/logo/pdf.png'
 import picStamp from '../../picture/section4/stamp.png'
 
 import ContactForm from './ContactForm';
@@ -43,12 +44,13 @@ function Contact() {
             </div>
             <div className={styles.ContactICON}>
                 <ul className={`${styles.ListContact} ${animListContact}`}>
-                    <li><p><a  href = "mailto: tom.kowprasert@gmail.com"><img class={styles.imgLogo} src={picEmail} alt='e-mail' />tom.kowprasert@gmail.com</a></p></li>
-                    <li><p><a  href = "https://line.me/ti/p/Kz7ELZgIw8?fbclid=IwAR2P8Q7GJX3aHni3DOZsIfhHH-H0dHkwkMupSArjItcOruqg8FKQCrroeHI"><img class={styles.imgLogo} src={picLine} alt='Line' />tom.kowprasert</a></p></li>
-                    <li><p><a  href = "tel: +6662-363-1016"><img class={styles.imgLogo} src={picPhone} alt='Telephone number' />+6662-363-1016</a></p></li>
-                    <li><p><a  href = "https://www.facebook.com/tomkung.kowprasert/"><img class={styles.imgLogo} src={picFB} alt='Facebook' />TK Techin Kowprasert</a></p></li>
-                    <li><p><a  href = "https://github.com/Tatomchin"><img class={styles.imgLogo} src={picGithub} alt='Github' />Tatomchin</a></p></li>
-                    <li><p><a  href = "https://www.linkedin.com/in/techin-kowprasert-9a3a08263"><img class={styles.imgLogo} src={picLinkedin} alt='Linkedin' />Techin Kowprasert</a></p></li>
+                    <li><p><a href="mailto: tom.kowprasert@gmail.com"><img class={styles.imgLogo} src={picEmail} alt='e-mail' />tom.kowprasert@gmail.com</a></p></li>
+                    <li><p><a href="https://line.me/ti/p/Kz7ELZgIw8?fbclid=IwAR2P8Q7GJX3aHni3DOZsIfhHH-H0dHkwkMupSArjItcOruqg8FKQCrroeHI"><img class={styles.imgLogo} src={picLine} alt='Line' />tom.kowprasert</a></p></li>
+                    <li><p><a href="tel: +6662-363-1016"><img class={styles.imgLogo} src={picPhone} alt='Telephone number' />+6662-363-1016</a></p></li>
+                    <li><p><a href="https://www.facebook.com/tomkung.kowprasert/"><img class={styles.imgLogo} src={picFB} alt='Facebook' />TK Techin Kowprasert</a></p></li>
+                    <li><p><a href="https://github.com/Tatomchin"><img class={styles.imgLogo} src={picGithub} alt='Github' />Tatomchin</a></p></li>
+                    <li><p><a href="https://www.linkedin.com/in/techin-kowprasert-9a3a08263"><img class={styles.imgLogo} src={picLinkedin} alt='Linkedin' />Techin Kowprasert</a></p></li>
+                    <li><p><a href='https://drive.google.com/file/d/1CSBUCXiJse_Qq8Dj9CSs_6adcU9cvd1d/view?usp=sharing'><img class={styles.imgLogo} src={picPDF} alt='PDF resume' />Download Resume PDF</a></p></li>
                 </ul>
             </div>
         </div>

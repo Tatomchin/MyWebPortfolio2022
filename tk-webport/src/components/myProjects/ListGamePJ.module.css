@@ -227,7 +227,7 @@
     }
 
     .DropQuest{
-        height: 630px;
+        height: 500px;
         width: auto;
         padding-bottom: 10px;
         animation: fadeDownDropQuestMax600 1s ease;
@@ -251,6 +251,12 @@
         width: auto;
         padding-bottom: 10px;
         animation: fadeDownDeadLineSpaceMax600 1s ease;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .DropQuest{
+        height: 600px;
     }
 }
 

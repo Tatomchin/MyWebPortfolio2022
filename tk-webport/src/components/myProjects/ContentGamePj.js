@@ -19,7 +19,7 @@ function ShowContentGamePJ({ showFullSizeImg, showFullSizeImgCer, contentNumber,
             <div id={styles.DropQuest} className={`${styles.DropQuest} ${hideContent}`}>
                 <p className={`${styles.pjText} ${hideText}`} >
                     This is a game project for learning the elements of chemical at high school in Thailand.
-                    This game has multiplayer gameplay run on the Android platform. Building by Unreal Engine 4.
+                    This game has multiplayer gameplay run on the Android platform. Building with Unreal Engine 4.
                     This is game received a certificate from 24th  NSC 2022 (National Software Contest)
                     Entered finals and 19th ECTI-CON (International Conference on Electrical Engineering/Electronics, Computer, Telecommunications and Information Technology).
                 </p>

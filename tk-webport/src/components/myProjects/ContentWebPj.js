@@ -26,7 +26,7 @@ function ShowContentWebPJ({ showFullSizeImg, contentNumber, hideContent, hideTex
                 <img className={`${styles.imgPjEx} ${hideImgPjEx}`} src={picAsean3} onClick={() => showFullSizeImg(picAsean3)} alt="Asean 3" />
             </div>
             <div className={styles.btnTry}>
-                <a className={`${styles.pjText} ${hideText}`} href="https://asean-information-itkmitl.netlify.app/">Click to View Web!</a>
+                <a className={`${styles.pjText} ${hideText}`} href="https://asean-information-itkmitl.netlify.app/">Click to View Website!</a>
             </div>
         </div>
     ),
@@ -45,7 +45,7 @@ function ShowContentWebPJ({ showFullSizeImg, contentNumber, hideContent, hideTex
                 <img className={`${styles.imgPjEx} ${hideImgPjEx}`} src={picConsole3} onClick={() => showFullSizeImg(picConsole3)} alt="Consoles's Travel 3" />
             </div>
             <div className={styles.btnTry}>
-                <a className={`${styles.pjText} ${hideText}`} href="https://console-travel-rocketpj.netlify.app">Click to View Web!</a>
+                <a className={`${styles.pjText} ${hideText}`} href="https://console-travel-rocketpj.netlify.app">Click to View Website!</a>
             </div>
         </div>
     ),
@@ -62,7 +62,7 @@ function ShowContentWebPJ({ showFullSizeImg, contentNumber, hideContent, hideTex
                 <img className={`${styles.imgPjEx} ${hideImgPjEx}`} src={picCleanfield3} onClick={() => showFullSizeImg(picCleanfield3)} alt="Clean Field 3" />
             </div>
             <div className={styles.btnTry}>
-                <a className={`${styles.pjText} ${hideText}`} href="https://cleanfield.netlify.app/">Click to View Web!</a>
+                <a className={`${styles.pjText} ${hideText}`} href="https://cleanfield.netlify.app/">Click to View Website!</a>
             </div>
         </div>
     ),

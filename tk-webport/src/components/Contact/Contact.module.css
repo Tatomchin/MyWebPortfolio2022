@@ -105,6 +105,10 @@
     animation-delay: calc(0.25s + 1.75s);
 }
 
+.AnimListContact li:nth-child(7) {
+    animation-delay: calc(0.25s + 2s);
+}
+
 
 @media screen and (max-width: 600px) {
     .ContactBg {
@@ -203,6 +207,10 @@
     }
     .ListContact {
         font-size: 1em;
+    }
+    #stampPic {
+        top: 30px;
+        right: 50px;
     }
 }
 
