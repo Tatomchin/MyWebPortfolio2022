@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from './ListGamePJ.module.css';
-import stylesBG from './MyProjects.module.css';
+import stylesBG from './MyProjectsList.module.css';
 import picGithub from '../../picture/assets/logo/github.png';
 
 import ShowContentGamePJ from './ContentGamePj';

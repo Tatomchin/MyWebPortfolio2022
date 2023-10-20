@@ -1,4 +1,4 @@
-import styles from './MyProjects.module.css';
+import styles from './MyProjectsList.module.css'
 import ListWebPJ from './ListWebPJ';
 import ListGamePJ from './ListGamePJ';
 
