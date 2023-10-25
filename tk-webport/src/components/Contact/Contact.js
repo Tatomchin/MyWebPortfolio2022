@@ -50,7 +50,7 @@ function Contact() {
                     <li><p><a href="https://www.facebook.com/tomkung.kowprasert/"><img class={styles.imgLogo} src={picFB} alt='Facebook' />TK Techin Kowprasert</a></p></li>
                     <li><p><a href="https://github.com/Tatomchin"><img class={styles.imgLogo} src={picGithub} alt='Github' />Tatomchin</a></p></li>
                     <li><p><a href="https://www.linkedin.com/in/techin-kowprasert-9a3a08263"><img class={styles.imgLogo} src={picLinkedin} alt='Linkedin' />Techin Kowprasert</a></p></li>
-                    <li><p><a href='https://drive.google.com/file/d/1CSBUCXiJse_Qq8Dj9CSs_6adcU9cvd1d/view?usp=sharing'><img class={styles.imgLogo} src={picPDF} alt='PDF resume' />Download Resume PDF</a></p></li>
+                    <li><p><a href='https://drive.google.com/drive/folders/1c0_ouhbf6RGNgCNTJGKMVxXEzxlbvFF4?usp=drive_link'><img class={styles.imgLogo} src={picPDF} alt='PDF resume' />Download Resume PDF</a></p></li>
                 </ul>
             </div>
         </div>
